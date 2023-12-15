@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './reset.css';
-import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
+import '@styles/reset.css';
+import '@styles/global.css';
+import ThemeRootProvider from '@/components/theme-provider/ThemeProvider';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -12,8 +10,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="tr">
+      <body>
+        <ThemeRootProvider>{children}</ThemeRootProvider>
+      </body>
     </html>
   );
 }
