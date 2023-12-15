@@ -6,6 +6,9 @@ export default createMiddleware({
 
   // Used when no locale matches
   defaultLocale: 'tr',
+
+  // Auto langueage
+  localeDetection: true,
 });
 
 export const config = {
