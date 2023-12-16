@@ -3,13 +3,29 @@ import { unstable_setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import { IParams } from './types';
+import { locales } from '@/i18n';
+import { langMetaConvert, langCanonicalUrls } from '@/languages/lang-meta-convert';
 
 // Static meta tags rendering
 export async function generateMetadata({ params: { locale } }: IParams) {
-  const t = await getTranslations({ locale, namespace: 'Metadata' });
+  const multiMetadata = await getTranslations({ locale, namespace: 'Metadata' });
 
   return {
-    title: t('title'),
+    title: multiMetadata('title'),
+    description: multiMetadata('description'),
+    keywords: multiMetadata('keywords'),
+    metadataBase: new URL(multiMetadata('metadataBase.baseUrl')),
+    alternates: {
+      canonical: '/',
+      languages: langCanonicalUrls(locales, locale),
+    },
+    openGraph: {
+      //og:title, og:description yerine geçer. genel sosyal medyalarda görünüm.
+      title: multiMetadata('openGraph.title'),
+      description: multiMetadata('openGraph.description'),
+      locale: multiMetadata('openGraph.locale'),
+      alternateLocale: langMetaConvert(locales, locale),
+    },
   };
 }
 

@@ -1,6 +1,16 @@
 {
   "Metadata": {
-    "title": "Anasayfa"
+    "title": "Anasayfa",
+    "description": "Bu türkçe bir sayfadır.",
+    "keywords": "kelime1, kelime2",
+    "metadataBase": {
+      "baseUrl": "http://localhost:3000"
+    },
+    "openGraph": {
+      "locale": "tr_TR",
+      "title": "Anasayfa",
+      "description": "..."
+    }
   },
   "Index": {
     "title": "Hoşgeldin Dünya! Bu sayfa Türkçe."

@@ -1,6 +1,16 @@
 {
   "Metadata": {
-    "title": "Home Page"
+    "title": "Home Page",
+    "description": "This is an English page.",
+    "keywords": "keywords1, keywords2",
+    "metadataBase": {
+      "baseUrl": "http://localhost:3000"
+    },
+    "openGraph": {
+      "locale": "en_US",
+      "title": "Home Page",
+      "description": "..."
+    }
   },
   "Index": {
     "title": "Hello world! This page English"

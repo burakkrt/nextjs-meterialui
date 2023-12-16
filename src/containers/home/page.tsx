@@ -9,8 +9,8 @@ function HomeContainer() {
       <Typography variant="h2" gutterBottom>
         h2. Heading
       </Typography>
-      <Typography variant="h3" gutterBottom>
-        h3. Heading
+      <Typography variant="h3" gutterBottom style={{ color: 'red' }}>
+        Geçersiz bir dile gittiğinde not found dosyasını oluştur.
       </Typography>
       <Typography variant="h4" gutterBottom>
         h4. Heading
