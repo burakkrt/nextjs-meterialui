@@ -80,7 +80,7 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handlerToggleMenu(true)}
+              onClick={() => alert('rr')}
               color="inherit">
               <MenuIcon />
             </IconButton>
@@ -156,7 +156,7 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Remy Sharp" src="/static/images/avatar.webp" />
               </IconButton>
             </Tooltip>
             <Menu
