@@ -23,7 +23,9 @@
       "@app/*": ["./src/app/*"],
       "@containers/*": ["./src/containers/*"],
       "@components/*": ["./src/components/*"],
-      "@styles/*": ["./src/styles/*"]
+      "@styles/*": ["./src/styles/*"],
+      "@languages/*": ["./src/languages/*"],
+      "@store/*": ["./src/store/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

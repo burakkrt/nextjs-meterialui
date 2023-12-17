@@ -9,6 +9,7 @@ import ThemeRootProvider from '@/components/theme-provider/ThemeProvider';
 import HeaderPage from '@/components/header/page';
 import FooterPage from '@/components/footer/page';
 import getLangContent from '@/components/get-lang-contents/getLangHeaders';
+import ReduxProvider from '@store/ReduxProvider';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -27,11 +28,13 @@ export default function LocaleLayout({ children, params: { locale } }: IRootPara
   return (
     <html lang={locale}>
       <body>
-        <ThemeRootProvider>
-          <HeaderPage locale={locale} langHeader={getLangContent()} />
-          {children}
-          <FooterPage />
-        </ThemeRootProvider>
+        <ReduxProvider>
+          <ThemeRootProvider>
+            <HeaderPage locale={locale} langHeader={getLangContent()} />
+            {children}
+            <FooterPage />
+          </ThemeRootProvider>
+        </ReduxProvider>
       </body>
     </html>
   );
