@@ -28,9 +28,8 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import { styled } from '@mui/material/styles';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { changeMode } from '@store/slicer/chanceModeSlice';
-import GetReduxStates from '@/store/redux-methods';
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -38,7 +37,7 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
   const [mobileRightMenu, setMobileRightMenu] = React.useState<boolean>(false);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
   const dispatch = useDispatch();
-  const mode = GetReduxStates('mode');
+  const mode = useSelector((state: any) => state.mode);
 
   const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElUser(event.currentTarget);
