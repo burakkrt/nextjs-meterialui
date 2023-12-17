@@ -3,13 +3,17 @@
     "title": "Home Page",
     "description": "This is an English page.",
     "keywords": "keywords1, keywords2",
+    "applicationName": "...",
     "metadataBase": {
       "baseUrl": "http://localhost:3000"
     },
     "openGraph": {
       "locale": "en_US",
       "title": "Home Page",
-      "description": "..."
+      "description": "...",
+      "url": "...",
+      "siteName": "...",
+      "imagesAlt": "..."
     }
   },
   "Header": {
