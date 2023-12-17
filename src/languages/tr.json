@@ -12,6 +12,23 @@
       "description": "..."
     }
   },
+  "Header": {
+    "pages": {
+      "pageCount": "3",
+      "page1": {
+        "label": "Anasayfa",
+        "path": "/"
+      },
+      "page2": {
+        "label": "Hakkımızda",
+        "path": "/about"
+      },
+      "page3": {
+        "label": "Ürünler",
+        "path": "/product"
+      }
+    }
+  },
   "Index": {
     "title": "Hoşgeldin Dünya! Bu sayfa Türkçe."
   },

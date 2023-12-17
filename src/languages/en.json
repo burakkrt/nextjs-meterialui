@@ -12,6 +12,23 @@
       "description": "..."
     }
   },
+  "Header": {
+    "pages": {
+      "pageCount": "3",
+      "page1": {
+        "label": "Home",
+        "path": "/"
+      },
+      "page2": {
+        "label": "About",
+        "path": "/about"
+      },
+      "page3": {
+        "label": "Product",
+        "path": "/product"
+      }
+    }
+  },
   "Index": {
     "title": "Hello world! This page English"
   },

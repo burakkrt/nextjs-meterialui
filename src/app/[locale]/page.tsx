@@ -1,10 +1,12 @@
 import HomeContainer from '@/containers/home/page';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
-import { useTranslations } from 'next-intl';
 import { IParams } from './types';
 import { locales } from '@/i18n';
-import { langMetaConvert, langCanonicalUrls } from '@/languages/lang-meta-convert';
+import {
+  langMetaConvert,
+  langCanonicalUrls,
+} from '@/components/get-lang-contents/lang-meta-convert';
 
 // Static meta tags rendering
 export async function generateMetadata({ params: { locale } }: IParams) {
@@ -31,12 +33,6 @@ export async function generateMetadata({ params: { locale } }: IParams) {
 
 export default function Index({ params: { locale } }: IParams) {
   unstable_setRequestLocale(locale);
-  const t = useTranslations('Index');
 
-  return (
-    <>
-      <h1>{t('title')}</h1>
-      <HomeContainer />
-    </>
-  );
+  return <HomeContainer />;
 }
