@@ -3,7 +3,9 @@ import { RootState } from './ReduxProvider';
 
 export type IGetStateNames = 'mode';
 
-export const GetReduxStates = (stateName: IGetStateNames) => {
+const GetReduxStates = (stateName: IGetStateNames) => {
   const state = useSelector((state: RootState) => state[stateName]);
   return state;
 };
+
+export default GetReduxStates;
