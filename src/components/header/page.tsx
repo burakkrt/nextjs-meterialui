@@ -156,7 +156,7 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar.webp" />
+                <Avatar alt="Remy Sharp" src="/images/avatar.webp" />
               </IconButton>
             </Tooltip>
             <Menu
