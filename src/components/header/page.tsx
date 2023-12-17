@@ -28,13 +28,6 @@ import { IRootParams } from './types';
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-import dynamic from 'next/dynamic';
-
-const DynamicComponent = dynamic(() => import('@app/[locale]/about/page'), {
-  loading: () => <p>Loading...</p>,
-  ssr: false, // Bu, bileşenin sunucu tarafında yüklenmemesini sağlar
-});
-
 const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
   const [mobileRightMenu, setMobileRightMenu] = React.useState<boolean>(false);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
