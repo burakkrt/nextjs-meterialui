@@ -224,9 +224,9 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
             <FormControlLabel
               control={<MaterialUISwitch sx={{ m: 1 }} />}
               onChange={() => dispatch(changeMode())}
-              checked={mode === 'light'}
+              checked={mode === 'dark'}
               label={mode + ' Mode'}
-              defaultChecked={mode === 'light'}
+              defaultChecked={mode === 'dark'}
             />
           </FormGroup>
 

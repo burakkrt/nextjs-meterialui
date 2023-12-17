@@ -1,14 +1,17 @@
 import { PaletteMode } from '@mui/material';
 import { createSlice } from '@reduxjs/toolkit';
+import { getCookie, setCookie } from 'cookies-next';
 
-const initialState: PaletteMode = 'light';
+const initialState: PaletteMode = (getCookie('theme') as PaletteMode) || 'dark';
 
 export const chanceModeSlice = createSlice({
   name: 'mode',
   initialState,
   reducers: {
     changeMode: (state: PaletteMode): any => {
-      return state === 'dark' ? 'light' : 'dark';
+      const newTheme = state === 'dark' ? 'light' : 'dark';
+      setCookie('theme', newTheme);
+      return newTheme;
     },
   },
 });
