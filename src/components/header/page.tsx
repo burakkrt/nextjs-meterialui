@@ -148,6 +148,7 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
             }}>
             {pages.map((page, index) => (
               <Typography
+                key={index}
                 variant="h6"
                 noWrap
                 component="span"
@@ -155,7 +156,6 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
                   color: 'white',
                 }}>
                 <Link
-                  key={index}
                   href={'/' + (locale && locale) + page.path}
                   prefetch={true}
                   onClick={() => mobileRightMenu && handlerToggleMenu(false)}
