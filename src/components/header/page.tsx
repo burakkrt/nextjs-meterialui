@@ -12,7 +12,7 @@ import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import Link from '@mui/material/Link';
+import Link from 'next/link';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
@@ -80,7 +80,7 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={() => alert('rr')}
+              onClick={handlerToggleMenu(true)}
               color="inherit">
               <MenuIcon />
             </IconButton>
@@ -139,16 +139,27 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
             LOGO
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: 'none', md: 'flex' },
+              ml: 5,
+              gap: 3,
+            }}>
             {pages.map((page, index) => (
               <Link
                 key={index}
-                href={page.path}
-                underline="none"
-                variant="h6"
-                onClick={() => mobileRightMenu && handlerToggleMenu(false)}
-                sx={{ m: 2, color: 'white', display: 'block' }}>
-                {page.label}
+                href={'/' + (locale && locale) + page.path}
+                onClick={() => mobileRightMenu && handlerToggleMenu(false)}>
+                <Typography
+                  variant="h6"
+                  noWrap
+                  component="span"
+                  sx={{
+                    color: 'white',
+                  }}>
+                  {page.label}
+                </Typography>
               </Link>
             ))}
           </Box>

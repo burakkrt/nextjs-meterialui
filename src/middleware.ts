@@ -10,11 +10,9 @@ export default createMiddleware({
 
   // Auto langueage
   localeDetection: true,
-
-  localePrefix: 'never',
 });
 
 export const config = {
   // Match only internationalized pathnames
-  // matcher: ['/', '/(tr|en)/:path*', '/:path*'],
+  matcher: ['/', '/(tr|en)/:path*'],
 };

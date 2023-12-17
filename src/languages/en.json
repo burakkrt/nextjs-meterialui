@@ -17,7 +17,7 @@
       "pageCount": "3",
       "page1": {
         "label": "Home",
-        "path": "/"
+        "path": ""
       },
       "page2": {
         "label": "About",
