@@ -147,22 +147,22 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
               gap: 3,
             }}>
             {pages.map((page, index) => (
-              <Typography
+              // <Typography
+              //   key={index}
+              //   variant="h6"
+              //   noWrap
+              //   component="span"
+              //   sx={{
+              //     color: 'white',
+              //   }}>
+              <Link
                 key={index}
-                variant="h6"
-                noWrap
-                component="span"
-                sx={{
-                  color: 'white',
-                }}>
-                <Link
-                  href={'/' + (locale && locale) + page.path}
-                  prefetch={true}
-                  onClick={() => mobileRightMenu && handlerToggleMenu(false)}
-                  style={{ color: 'inherit' }}>
-                  {page.label}
-                </Link>
-              </Typography>
+                href={'/' + (locale && locale) + page.path}
+                onClick={() => mobileRightMenu && handlerToggleMenu(false)}
+                style={{ color: 'inherit' }}>
+                {page.label}
+              </Link>
+              // </Typography>
             ))}
           </Box>
 
