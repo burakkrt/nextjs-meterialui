@@ -10,7 +10,6 @@ import HeaderPage from '@/components/header/page';
 import FooterPage from '@/components/footer/page';
 import getLangContent from '@/components/get-lang-contents/getLangHeaders';
 import ReduxProvider from '@store/ReduxProvider';
-import { useTranslations } from 'next-intl';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

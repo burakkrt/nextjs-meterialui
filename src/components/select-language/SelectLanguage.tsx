@@ -14,6 +14,8 @@ import { locales } from '@/i18n';
 import countryFlags from './countryFlag.json';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Box } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
 const currentCountries = countryFlags.data.filter((country) =>
   locales.includes(country.code.toLocaleLowerCase('en'))
@@ -56,12 +58,13 @@ function SimpleDialog(props: SimpleDialogProps) {
   );
 }
 
-function SelectLanguage({ locale, pathname }: IRootProps) {
+function SelectLanguage({ locale, pathname, color: textColor }: IRootProps) {
   const [open, setOpen] = React.useState(false);
   const [selectedValue, setSelectedValue] = React.useState<ICountry>(
     countryFlags.data.find((country) => country.code === locale.toLocaleUpperCase('en')) ||
       currentCountries[1]
   );
+  const theme = useTheme();
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -73,14 +76,24 @@ function SelectLanguage({ locale, pathname }: IRootProps) {
   };
 
   return (
-    <div>
+    <Box
+      sx={{
+        [theme.breakpoints.up('sm')]: {
+          position: 'absolute',
+          top: '50%',
+          right: '1rem',
+          transform: 'translateY(-50%);',
+        },
+      }}>
       <Button onClick={handleClickOpen} sx={{ color: 'white' }}>
         <ListItemAvatar sx={{ minWidth: '0', marginRight: '0.5rem' }}>
           <Avatar sx={{ bgcolor: 'transparent', color: 'none' }}>
             <Image src={selectedValue.image} alt="Country Image" fill />
           </Avatar>
         </ListItemAvatar>
-        <Typography variant="button">{selectedValue.name}</Typography>
+        <Typography variant="button" sx={{ color: `${textColor}` }}>
+          {selectedValue.name}
+        </Typography>
       </Button>
       <SimpleDialog
         selectedValue={selectedValue}
@@ -89,7 +102,7 @@ function SelectLanguage({ locale, pathname }: IRootProps) {
         pathname={pathname}
         locale={locale}
       />
-    </div>
+    </Box>
   );
 }
 

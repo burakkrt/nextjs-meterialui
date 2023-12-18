@@ -19,7 +19,7 @@
   },
   "Header": {
     "pages": {
-      "pageCount": "3",
+      "pageCount": "4",
       "page1": {
         "label": "Anasayfa",
         "path": ""
@@ -31,6 +31,10 @@
       "page3": {
         "label": "Ürünler",
         "path": "/product"
+      },
+      "page4": {
+        "label": "İletişim",
+        "path": "/contact"
       }
     },
     "selectLanguage": "Lütfen Dil Seçin"

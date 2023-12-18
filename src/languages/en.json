@@ -18,7 +18,7 @@
   },
   "Header": {
     "pages": {
-      "pageCount": "3",
+      "pageCount": "4",
       "page1": {
         "label": "Home",
         "path": ""
@@ -30,6 +30,10 @@
       "page3": {
         "label": "Product",
         "path": "/product"
+      },
+      "page4": {
+        "label": "Contact",
+        "path": "/contact"
       }
     },
     "selectLanguage": "Lütfen Dil Seçin"

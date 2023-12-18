@@ -17,4 +17,5 @@ export interface ICountry {
 export interface IRootProps {
   locale: string;
   pathname: string;
+  color?: string;
 }

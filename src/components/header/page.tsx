@@ -29,14 +29,12 @@ import EmailIcon from '@mui/icons-material/Email';
 import { usePathname } from 'next/navigation';
 
 import SelectLanguage from '@components/select-language';
-import { red } from '@mui/material/colors';
 import { useTheme } from '@mui/material/styles';
+import Image from 'next/image';
+import Tab from '@mui/material/Tab';
+import Tabs from '@mui/material/Tabs';
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
-function headerUp() {
-  return <div>page</div>;
-}
 
 const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
   const [mobileRightMenu, setMobileRightMenu] = React.useState<boolean>(false);
@@ -64,9 +62,20 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
     setMobileRightMenu(state);
   };
 
+  function companyLogo() {
+    return (
+      <Image src="/images/Next.js-logo.png" alt="Company Logo" fill quality={100} sizes="56vw" />
+    );
+  }
+
   return (
-    <AppBar position="static">
-      <Box sx={{ backgroundColor: '#d83f31' }}>
+    <AppBar
+      position="static"
+      sx={{
+        backgroundColor: 'transparent',
+        boxShadow: 'none',
+      }}>
+      <Box sx={{ backgroundColor: '#B31312' }}>
         <Container maxWidth="xl">
           <Box
             sx={{
@@ -119,152 +128,178 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
                 </Typography>
               </Box>
             </Box>
-            {<SelectLanguage locale={locale} pathname={pathname} />}
+            <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
+              {<SelectLanguage locale={locale} pathname={pathname} color={'white'} />}
+            </Box>
           </Box>
         </Container>
       </Box>
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href={`/${locale ?? locale}`}
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}>
-            LOGO
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, position: 'relative' }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handlerToggleMenu(true)}
-              color="inherit">
-              <MenuIcon />
-            </IconButton>
-
-            <Drawer anchor="right" open={mobileRightMenu} onClose={handlerToggleMenu(false)}>
-              <Box
-                sx={{ width: 250 }}
-                role="presentation"
-                onClick={handlerToggleMenu(false)}
-                onKeyDown={handlerToggleMenu(false)}>
-                <List>
-                  {pages.map((page, index) => (
-                    <ListItem key={index} disablePadding>
-                      <ListItemButton>
-                        <ListItemIcon>
-                          {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                        </ListItemIcon>
-                        <ListItemText primary={page.label} />
-                      </ListItemButton>
-                    </ListItem>
-                  ))}
-                </List>
-                <Divider />
-                <List>
-                  {pages.map((page, index) => (
-                    <ListItem key={index} disablePadding>
-                      <ListItemButton>
-                        <ListItemIcon>
-                          {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                        </ListItemIcon>
-                        <ListItemText primary={page.label} />
-                      </ListItemButton>
-                    </ListItem>
-                  ))}
-                </List>
-              </Box>
-            </Drawer>
-          </Box>
-
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href={`/${locale ?? locale}`}
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}>
-            LOGO
-          </Typography>
-
+      <Box sx={{ color: '#191919' }}>
+        <Toolbar
+          disableGutters
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            [theme.breakpoints.up('sm')]: {
+              paddingTop: '1rem',
+            },
+          }}>
           <Box
             sx={{
-              flexGrow: 1,
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignItems: 'center',
               display: { xs: 'none', md: 'flex' },
-              ml: 5,
-              gap: 3,
             }}>
-            {pages.map((page, index) => (
-              // <Typography
-              //   key={index}
-              //   variant="h6"
-              //   noWrap
-              //   component="span"
-              //   sx={{
-              //     color: 'white',
-              //   }}>
-              <Link
-                key={index}
-                href={'/' + (locale && locale) + page.path}
-                onClick={() => mobileRightMenu && handlerToggleMenu(false)}
-                style={{ color: 'inherit' }}>
-                {page.label}
-              </Link>
-              // </Typography>
-            ))}
+            <Box sx={{ width: '68px', height: '48px', position: 'relative' }}>{companyLogo()}</Box>
+            <Typography
+              variant="h4"
+              noWrap
+              component="a"
+              href={`/${locale ?? locale}`}
+              sx={{
+                fontWeight: 700,
+                color: 'inherit',
+                textDecoration: 'none',
+              }}>
+              FİRMA ADI
+            </Typography>
           </Box>
+          <Box
+            sx={{
+              width: '100%',
+              borderBottom: '1px solid rgba(0,0,0,0.16)',
+              padding: '0.7rem 0 0.4rem 0',
+              [theme.breakpoints.up('sm')]: {
+                borderTop: '1px solid rgba(0,0,0,0.16)',
+                marginTop: '1rem',
+                padding: '1rem 0',
+              },
+            }}>
+            <Container maxWidth="xl">
+              <Box
+                sx={{
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  [theme.breakpoints.up('sm')]: {
+                    position: 'relative',
+                  },
+                }}>
+                {/* Only Mobile Visible */}
+                <Box
+                  sx={{
+                    flexGrow: 1,
+                    display: { xs: 'flex', md: 'none' },
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}>
+                  <Box sx={{ width: '56px', height: '42px', position: 'relative' }}>
+                    {companyLogo()}
+                  </Box>
+                  <Typography
+                    variant="h5"
+                    noWrap
+                    component="a"
+                    href={`/${locale ?? locale}`}
+                    sx={{
+                      fontFamily: 'monospace',
+                      fontWeight: 700,
+                      color: 'inherit',
+                      textDecoration: 'none',
+                    }}>
+                    FİRMA ADI
+                  </Typography>
+                </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/images/avatar.webp" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}>
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+                {/* Only Mobile Visible */}
+                <Box sx={{ display: { xs: 'flex', md: 'none' }, position: 'relative' }}>
+                  <IconButton
+                    size="large"
+                    aria-label="account of current user"
+                    aria-controls="menu-appbar"
+                    aria-haspopup="true"
+                    onClick={handlerToggleMenu(true)}
+                    color="inherit">
+                    <MenuIcon />
+                  </IconButton>
+
+                  <Drawer anchor="right" open={mobileRightMenu} onClose={handlerToggleMenu(false)}>
+                    <Box
+                      sx={{ width: 250 }}
+                      role="presentation"
+                      onClick={handlerToggleMenu(false)}
+                      onKeyDown={handlerToggleMenu(false)}>
+                      <List>
+                        {pages.map((page, index) => (
+                          <ListItem key={index} disablePadding>
+                            <ListItemButton>
+                              <ListItemIcon>
+                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                              </ListItemIcon>
+                              <ListItemText primary={page.label} />
+                            </ListItemButton>
+                          </ListItem>
+                        ))}
+                      </List>
+                      <Divider />
+                      <List>
+                        {pages.map((page, index) => (
+                          <ListItem key={index} disablePadding>
+                            <ListItemButton>
+                              <ListItemIcon>
+                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                              </ListItemIcon>
+                              <ListItemText primary={page.label} />
+                            </ListItemButton>
+                          </ListItem>
+                        ))}
+                      </List>
+                    </Box>
+                  </Drawer>
+                </Box>
+
+                <Box
+                  sx={{
+                    flexGrow: 1,
+                    display: { xs: 'none', md: 'flex' },
+                    gap: 3,
+                    [theme.breakpoints.up('sm')]: {
+                      justifyContent: 'center',
+                    },
+                  }}>
+                  {pages.map((page, index) => (
+                    <Typography
+                      key={index}
+                      variant="body1"
+                      noWrap
+                      component="span"
+                      sx={{ ':hover': { fontWeight: '700' } }}>
+                      <Link
+                        key={index}
+                        href={'/' + (locale && locale) + page.path}
+                        onClick={() => mobileRightMenu && handlerToggleMenu(false)}
+                        style={{ color: 'inherit' }}
+                        title={page.label}>
+                        {page.label}
+                      </Link>
+                    </Typography>
+                  ))}
+                </Box>
+
+                <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                  {<SelectLanguage locale={locale} pathname={pathname} color={'black'} />}
+                </Box>
+              </Box>
+            </Container>
           </Box>
         </Toolbar>
-      </Container>
+      </Box>
     </AppBar>
   );
 };
