@@ -1,21 +1,22 @@
 import { PaletteMode } from '@mui/material';
 import { createSlice } from '@reduxjs/toolkit';
-import { getCookie, setCookie } from 'cookies-next';
+import { setCookie } from 'cookies-next';
+import type { PayloadAction } from '@reduxjs/toolkit';
 
-const initialState: PaletteMode = (getCookie('theme') as PaletteMode) || 'dark';
+const initialState: PaletteMode = 'light';
 
 export const chanceModeSlice = createSlice({
   name: 'mode',
   initialState,
   reducers: {
-    changeMode: (state: PaletteMode): any => {
-      const newTheme = state === 'dark' ? 'light' : 'dark';
+    updateMode: (state: PaletteMode, action: PayloadAction<PaletteMode>): any => {
+      const newTheme = action.payload;
       setCookie('theme', newTheme);
       return newTheme;
     },
   },
 });
 
-export const { changeMode } = chanceModeSlice.actions;
+export const { updateMode } = chanceModeSlice.actions;
 
 export default chanceModeSlice.reducer;
