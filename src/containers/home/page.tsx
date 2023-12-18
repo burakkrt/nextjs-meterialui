@@ -5,9 +5,9 @@ import Typography from '@mui/material/Typography';
 function HomeContainer() {
   return (
     <Box sx={{ width: '80%', margin: '5rem auto', height: '3000px' }}>
-      <Typography variant="h1" gutterBottom>
+      {/* <Typography variant="h1" gutterBottom>
         h1. Heading
-      </Typography>
+      </Typography> */}
       <Typography variant="h2" gutterBottom>
         h2. Heading
       </Typography>

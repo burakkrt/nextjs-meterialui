@@ -31,7 +31,8 @@
         "label": "Product",
         "path": "/product"
       }
-    }
+    },
+    "selectLanguage": "Lütfen Dil Seçin"
   },
   "Index": {
     "title": "Hello world! This page English"

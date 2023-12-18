@@ -24,14 +24,25 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import * as Styled from './page.styled';
 import { IRootParams } from './types';
-import Switch from '@mui/material/Switch';
-import { styled } from '@mui/material/styles';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import EmailIcon from '@mui/icons-material/Email';
+import { usePathname } from 'next/navigation';
+
+import SelectLanguage from '@components/select-language';
+import { red } from '@mui/material/colors';
+import { useTheme } from '@mui/material/styles';
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
+function headerUp() {
+  return <div>page</div>;
+}
 
 const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
   const [mobileRightMenu, setMobileRightMenu] = React.useState<boolean>(false);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+  const pathname = usePathname();
+  const theme = useTheme();
 
   const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElUser(event.currentTarget);
@@ -55,6 +66,63 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
 
   return (
     <AppBar position="static">
+      <Box sx={{ backgroundColor: '#d83f31' }}>
+        <Container maxWidth="xl">
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              minHeight: '50px',
+              [theme.breakpoints.down('sm')]: {
+                padding: '0.5rem 0',
+              },
+            }}>
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.1rem',
+                [theme.breakpoints.up('sm')]: {
+                  gap: '2rem',
+                  flexDirection: 'row',
+                },
+              }}>
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'start',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                }}>
+                <LocalPhoneIcon />
+                <Typography variant="subtitle2">+90 555 555 55 55</Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'start',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                }}>
+                <EmailIcon />
+                <Typography
+                  component="a"
+                  href="/"
+                  color="white"
+                  sx={{ ':hover': { textDecoration: 'underline' } }}
+                  variant="subtitle2">
+                  info@firmadi.com.tr
+                </Typography>
+              </Box>
+            </Box>
+            {<SelectLanguage locale={locale} pathname={pathname} />}
+          </Box>
+        </Container>
+      </Box>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />

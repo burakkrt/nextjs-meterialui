@@ -32,7 +32,8 @@
         "label": "Ürünler",
         "path": "/product"
       }
-    }
+    },
+    "selectLanguage": "Lütfen Dil Seçin"
   },
   "Index": {
     "title": "Hoşgeldin Dünya! Bu sayfa Türkçe."

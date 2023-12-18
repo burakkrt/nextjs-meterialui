@@ -7,7 +7,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 function ThemeRootProvider({ children }: IRootProps) {
   const theme = createTheme({
     typography: {
-      fontFamily: ['Alegreya', 'Roboto', '-apple-system'].join(','),
+      fontFamily: ['Poppins', 'Roboto', '-apple-system'].join(','),
     },
   });
 
