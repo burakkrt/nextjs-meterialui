@@ -21,7 +21,7 @@ function FooterHero() {
       sx={{
         position: 'absolute',
         right: '15%',
-        top: '-30%',
+        top: '-25%',
         width: '375px',
         height: '375px',
         ':after': {
@@ -87,38 +87,21 @@ const FooterPage = () => {
               component="div"
               sx={{
                 [theme.breakpoints.up('md')]: {
-                  backgroundColor: 'rgba(0,0,0,0.2)',
-                  borderRadius: 1,
-                  padding: 4,
+                  minHeight: '350px',
+                  height: '100%',
+                  border: '4px solid #820300',
+                  borderRadius: '4px',
                 },
               }}>
-              <Typography
-                variant="h4"
-                sx={{
-                  display: 'inline-block',
-                  position: 'relative',
-                  paddingBottom: 2,
-                  marginBottom: 2,
-                  ':after': {
-                    content: '""',
-                    position: 'absolute',
-                    display: 'block',
-                    left: 0,
-                    bottom: 0,
-                    minWidth: 100,
-                    width: '30%',
-                    height: '2px',
-                    backgroundColor: 'white',
-                  },
-                }}>
-                HAKKIMIZDA
-              </Typography>
-              <Typography variant="body1">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum tenetur repellat
-                necessitatibus quam quo expedita veritatis magni, quos laboriosam a corporis,
-                deserunt, eligendi cumque eos aliquid in soluta unde? Reprehenderit nostrum qui
-                voluptates asperiores quibusdam fugiat debitis possimus molestias tempore!
-              </Typography>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192698.64616681487!2d28.847373737387183!3d41.00520413827649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1702993753819!5m2!1str!2str"
+                width="100%"
+                height="100%"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen={true}
+                aria-hidden="false"
+                tabIndex={0}></iframe>
             </Box>
           </Grid>
           <Grid
@@ -126,11 +109,11 @@ const FooterPage = () => {
             xs={4}
             sx={{
               [theme.breakpoints.up('sm')]: {
-                marginLeft: 10,
+                marginLeft: 6,
               },
             }}>
             <Typography
-              variant="h4"
+              variant="h5"
               sx={{
                 display: 'inline-block',
                 position: 'relative',
@@ -210,13 +193,9 @@ const FooterPage = () => {
                 },
               }}>
               <LocationOnIcon sx={{ [theme.breakpoints.up('sm')]: { fontSize: 35 } }} />
-              <Typography
-                color="inherit"
-                variant="h6"
-                sx={{
-                  textDecoration: 'none',
-                }}>
-                Merkez Caddesi Merkez Mahallesi No 0 Fatih/İstanbul
+              <Typography color="inherit" variant="h6">
+                Merkez Caddesi Merkez Mahallesi No: 0 <br />
+                Fatih / İstanbul
               </Typography>
             </Box>
           </Grid>
