@@ -128,178 +128,169 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
                 </Typography>
               </Box>
             </Box>
-            <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
+            <Box sx={{ display: { sm: 'block', md: 'none' } }}>
               {<SelectLanguage locale={locale} pathname={pathname} color={'white'} />}
             </Box>
           </Box>
         </Container>
       </Box>
-      <Box sx={{ color: '#191919' }}>
-        <Toolbar
-          disableGutters
+      <Toolbar disableGutters>
+        <Container
+          maxWidth="xl"
           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
+            borderBottom: '1px solid rgba(0,0,0,0.2)',
+            padding: '0.5rem 0',
             [theme.breakpoints.up('sm')]: {
-              paddingTop: '1rem',
+              padding: '1rem 0',
             },
           }}>
-          <Box
-            sx={{
-              flexDirection: 'row',
-              justifyContent: 'center',
-              alignItems: 'center',
-              display: { xs: 'none', md: 'flex' },
-            }}>
-            <Box sx={{ width: '68px', height: '48px', position: 'relative' }}>{companyLogo()}</Box>
-            <Typography
-              variant="h4"
-              noWrap
-              component="a"
-              href={`/${locale ?? locale}`}
+          <Box sx={{ color: '#191919', display: 'flex' }}>
+            <Box
               sx={{
-                fontWeight: 700,
-                color: 'inherit',
-                textDecoration: 'none',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+                display: { xs: 'none', md: 'flex' },
               }}>
-              FİRMA ADI
-            </Typography>
-          </Box>
-          <Box
-            sx={{
-              width: '100%',
-              borderBottom: '1px solid rgba(0,0,0,0.16)',
-              padding: '0.7rem 0 0.4rem 0',
-              [theme.breakpoints.up('sm')]: {
-                borderTop: '1px solid rgba(0,0,0,0.16)',
-                marginTop: '1rem',
-                padding: '1rem 0',
-              },
-            }}>
-            <Container maxWidth="xl">
+              <Box sx={{ width: '68px', height: '48px', position: 'relative' }}>
+                {companyLogo()}
+              </Box>
+              <Typography
+                variant="h4"
+                noWrap
+                component="a"
+                href={`/${locale ?? locale}`}
+                sx={{
+                  fontWeight: 700,
+                  color: 'inherit',
+                  textDecoration: 'none',
+                }}>
+                FİRMA ADI
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                width: '100%',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+                [theme.breakpoints.up('sm')]: {
+                  position: 'relative',
+                },
+              }}>
+              {/* Only Mobile Visible */}
               <Box
                 sx={{
-                  width: '100%',
-                  display: 'flex',
+                  flexGrow: 1,
+                  display: { xs: 'flex', md: 'none' },
                   flexDirection: 'row',
                   justifyContent: 'center',
                   alignItems: 'center',
+                }}>
+                <Box sx={{ width: '56px', height: '42px', position: 'relative' }}>
+                  {companyLogo()}
+                </Box>
+                <Typography
+                  variant="h5"
+                  noWrap
+                  component="a"
+                  href={`/${locale ?? locale}`}
+                  sx={{
+                    fontFamily: 'monospace',
+                    fontWeight: 700,
+                    color: 'inherit',
+                    textDecoration: 'none',
+                  }}>
+                  FİRMA ADI
+                </Typography>
+              </Box>
+
+              {/* Only Mobile Visible */}
+              <Box sx={{ display: { xs: 'flex', md: 'none' }, position: 'relative' }}>
+                <IconButton
+                  size="large"
+                  aria-label="account of current user"
+                  aria-controls="menu-appbar"
+                  aria-haspopup="true"
+                  onClick={handlerToggleMenu(true)}
+                  color="inherit">
+                  <MenuIcon />
+                </IconButton>
+
+                <Drawer anchor="right" open={mobileRightMenu} onClose={handlerToggleMenu(false)}>
+                  <Box
+                    sx={{ width: 250 }}
+                    role="presentation"
+                    onClick={handlerToggleMenu(false)}
+                    onKeyDown={handlerToggleMenu(false)}>
+                    <List>
+                      {pages.map((page, index) => (
+                        <ListItem key={index} disablePadding>
+                          <ListItemButton>
+                            <ListItemIcon>
+                              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                            </ListItemIcon>
+                            <ListItemText primary={page.label} />
+                          </ListItemButton>
+                        </ListItem>
+                      ))}
+                    </List>
+                    <Divider />
+                    <List>
+                      {pages.map((page, index) => (
+                        <ListItem key={index} disablePadding>
+                          <ListItemButton>
+                            <ListItemIcon>
+                              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                            </ListItemIcon>
+                            <ListItemText primary={page.label} />
+                          </ListItemButton>
+                        </ListItem>
+                      ))}
+                    </List>
+                  </Box>
+                </Drawer>
+              </Box>
+
+              <Box
+                sx={{
+                  flexGrow: 1,
+                  display: { xs: 'none', md: 'flex' },
+                  gap: 3,
                   [theme.breakpoints.up('sm')]: {
-                    position: 'relative',
+                    justifyContent: 'center',
                   },
                 }}>
-                {/* Only Mobile Visible */}
-                <Box
-                  sx={{
-                    flexGrow: 1,
-                    display: { xs: 'flex', md: 'none' },
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                  }}>
-                  <Box sx={{ width: '56px', height: '42px', position: 'relative' }}>
-                    {companyLogo()}
-                  </Box>
+                {pages.map((page, index) => (
                   <Typography
-                    variant="h5"
+                    key={index}
+                    variant="body1"
                     noWrap
-                    component="a"
-                    href={`/${locale ?? locale}`}
+                    component="span"
                     sx={{
-                      fontFamily: 'monospace',
-                      fontWeight: 700,
-                      color: 'inherit',
-                      textDecoration: 'none',
+                      ':hover': { fontWeight: '900' },
+                      fontWeight: '850',
                     }}>
-                    FİRMA ADI
-                  </Typography>
-                </Box>
-
-                {/* Only Mobile Visible */}
-                <Box sx={{ display: { xs: 'flex', md: 'none' }, position: 'relative' }}>
-                  <IconButton
-                    size="large"
-                    aria-label="account of current user"
-                    aria-controls="menu-appbar"
-                    aria-haspopup="true"
-                    onClick={handlerToggleMenu(true)}
-                    color="inherit">
-                    <MenuIcon />
-                  </IconButton>
-
-                  <Drawer anchor="right" open={mobileRightMenu} onClose={handlerToggleMenu(false)}>
-                    <Box
-                      sx={{ width: 250 }}
-                      role="presentation"
-                      onClick={handlerToggleMenu(false)}
-                      onKeyDown={handlerToggleMenu(false)}>
-                      <List>
-                        {pages.map((page, index) => (
-                          <ListItem key={index} disablePadding>
-                            <ListItemButton>
-                              <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                              </ListItemIcon>
-                              <ListItemText primary={page.label} />
-                            </ListItemButton>
-                          </ListItem>
-                        ))}
-                      </List>
-                      <Divider />
-                      <List>
-                        {pages.map((page, index) => (
-                          <ListItem key={index} disablePadding>
-                            <ListItemButton>
-                              <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                              </ListItemIcon>
-                              <ListItemText primary={page.label} />
-                            </ListItemButton>
-                          </ListItem>
-                        ))}
-                      </List>
-                    </Box>
-                  </Drawer>
-                </Box>
-
-                <Box
-                  sx={{
-                    flexGrow: 1,
-                    display: { xs: 'none', md: 'flex' },
-                    gap: 3,
-                    [theme.breakpoints.up('sm')]: {
-                      justifyContent: 'center',
-                    },
-                  }}>
-                  {pages.map((page, index) => (
-                    <Typography
+                    <Link
                       key={index}
-                      variant="body1"
-                      noWrap
-                      component="span"
-                      sx={{ ':hover': { fontWeight: '700' } }}>
-                      <Link
-                        key={index}
-                        href={'/' + (locale && locale) + page.path}
-                        onClick={() => mobileRightMenu && handlerToggleMenu(false)}
-                        style={{ color: 'inherit' }}
-                        title={page.label}>
-                        {page.label}
-                      </Link>
-                    </Typography>
-                  ))}
-                </Box>
-
-                <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                  {<SelectLanguage locale={locale} pathname={pathname} color={'black'} />}
-                </Box>
+                      href={'/' + (locale && locale) + page.path}
+                      onClick={() => mobileRightMenu && handlerToggleMenu(false)}
+                      style={{ color: '#352F44' }}
+                      title={page.label}>
+                      {page.label.toLocaleUpperCase('tr-TR')}
+                    </Link>
+                  </Typography>
+                ))}
               </Box>
-            </Container>
+
+              <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+                {<SelectLanguage locale={locale} pathname={pathname} color={'black'} />}
+              </Box>
+            </Box>
           </Box>
-        </Toolbar>
-      </Box>
+        </Container>
+      </Toolbar>
     </AppBar>
   );
 };

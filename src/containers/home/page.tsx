@@ -5,7 +5,7 @@ import { Container } from '@mui/material';
 
 function HomeContainer() {
   return (
-    <Container maxWidth="xl" sx={{ height: '3000px', backgroundColor: '#FF9800' }}>
+    <Container maxWidth="xl">
       <Box sx={{ padding: '5rem 0' }}>
         {/* <Typography variant="h1" gutterBottom>
         h1. Heading

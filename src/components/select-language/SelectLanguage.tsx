@@ -76,15 +76,7 @@ function SelectLanguage({ locale, pathname, color: textColor }: IRootProps) {
   };
 
   return (
-    <Box
-      sx={{
-        [theme.breakpoints.up('sm')]: {
-          position: 'absolute',
-          top: '50%',
-          right: '1rem',
-          transform: 'translateY(-50%);',
-        },
-      }}>
+    <>
       <Button onClick={handleClickOpen} sx={{ color: 'white' }}>
         <ListItemAvatar sx={{ minWidth: '0', marginRight: '0.5rem' }}>
           <Avatar sx={{ bgcolor: 'transparent', color: 'none' }}>
@@ -102,7 +94,7 @@ function SelectLanguage({ locale, pathname, color: textColor }: IRootProps) {
         pathname={pathname}
         locale={locale}
       />
-    </Box>
+    </>
   );
 }
 
