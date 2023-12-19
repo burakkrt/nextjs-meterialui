@@ -10,7 +10,7 @@ import { useTheme } from '@mui/material/styles';
 import Link from '@mui/material/Link';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
-import LastPageIcon from '@mui/icons-material/LastPage';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const footerBackImageUrl = '/images/footer-back.svg';
 const footerHeroImageUrl = '/images/footer-hero-2.png';
@@ -76,7 +76,6 @@ const FooterPage = () => {
         [theme.breakpoints.up('sm')]: {
           position: 'relative',
           marginTop: 25,
-          zIndex: '-3',
           filter: 'drop-shadow(0 0 12px rgba(0,0,0,0.5))',
         },
       }}>
@@ -85,32 +84,41 @@ const FooterPage = () => {
         <Grid container spacing={0}>
           <Grid item xs={5}>
             <Box
+              component="div"
               sx={{
                 [theme.breakpoints.up('md')]: {
-                  minHeight: '350px',
-                  height: '100%',
+                  backgroundColor: 'rgba(0,0,0,0.2)',
+                  borderRadius: 1,
+                  padding: 4,
+                },
+              }}>
+              <Typography
+                variant="h4"
+                sx={{
+                  display: 'inline-block',
                   position: 'relative',
+                  paddingBottom: 2,
+                  marginBottom: 2,
                   ':after': {
                     content: '""',
                     position: 'absolute',
                     display: 'block',
-                    top: '-15px',
-                    left: '-15px',
-                    width: 'calc(100% + 30px)',
-                    height: 'calc(100% + 30px)',
-                    backgroundColor: '#820300',
-                    zIndex: '-2',
-                    borderRadius: '4px',
+                    left: 0,
+                    bottom: 0,
+                    minWidth: 100,
+                    width: '30%',
+                    height: '2px',
+                    backgroundColor: 'white',
                   },
-                },
-              }}>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192698.64616681487!2d28.847373737387183!3d41.00520413827649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1702993753819!5m2!1str!2str"
-                width="100%"
-                height="100%"
-                style={{ border: '0', borderRadius: '4px' }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"></iframe>
+                }}>
+                HAKKIMIZDA
+              </Typography>
+              <Typography variant="body1">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum tenetur repellat
+                necessitatibus quam quo expedita veritatis magni, quos laboriosam a corporis,
+                deserunt, eligendi cumque eos aliquid in soluta unde? Reprehenderit nostrum qui
+                voluptates asperiores quibusdam fugiat debitis possimus molestias tempore!
+              </Typography>
             </Box>
           </Grid>
           <Grid
@@ -201,18 +209,15 @@ const FooterPage = () => {
                   marginTop: 3,
                 },
               }}>
-              <LastPageIcon sx={{ [theme.breakpoints.up('sm')]: { fontSize: 35 } }} />
-              <Link
-                href="mailto:info@firmadi.com.tr"
-                title="Mail adress"
-                target="_blank"
+              <LocationOnIcon sx={{ [theme.breakpoints.up('sm')]: { fontSize: 35 } }} />
+              <Typography
                 color="inherit"
                 variant="h6"
                 sx={{
                   textDecoration: 'none',
                 }}>
-                info@firmadi.com.tr
-              </Link>
+                Merkez Caddesi Merkez Mahallesi No 0 Fatih/İstanbul
+              </Typography>
             </Box>
           </Grid>
           <Grid item xs={12} sx={{ marginTop: 5, textAlign: 'end' }}>
