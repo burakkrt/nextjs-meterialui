@@ -38,6 +38,10 @@
     },
     "selectLanguage": "Lütfen Dil Seçin"
   },
+  "Footer": {
+    "contactTitle": "Contact",
+    "copyright": "All rights reserved."
+  },
   "Index": {
     "title": "Hello world! This page English"
   },

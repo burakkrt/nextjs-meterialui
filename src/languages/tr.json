@@ -39,6 +39,10 @@
     },
     "selectLanguage": "Lütfen Dil Seçin"
   },
+  "Footer": {
+    "contactTitle": "İletişim",
+    "copyright": "Tüm Hakları Saklıdır."
+  },
   "Index": {
     "title": "Hoşgeldin Dünya! Bu sayfa Türkçe."
   },
