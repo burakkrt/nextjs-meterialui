@@ -1,4 +1,10 @@
 import * as React from 'react';
+import { SimpleDialogProps, ICountry, IRootProps } from './types';
+import { locales } from '@/i18n';
+import countryFlags from './countryFlag.json';
+import Image from 'next/image';
+import Link from 'next/link';
+
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import List from '@mui/material/List';
@@ -8,13 +14,6 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Dialog from '@mui/material/Dialog';
 import Typography from '@mui/material/Typography';
-
-import { SimpleDialogProps, ICountry, IRootProps } from './types';
-import { locales } from '@/i18n';
-import countryFlags from './countryFlag.json';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Box } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
 const currentCountries = countryFlags.data.filter((country) =>

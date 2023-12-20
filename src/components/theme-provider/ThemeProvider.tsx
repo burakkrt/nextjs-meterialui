@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { IRootProps } from './types';
 import CssBaseline from '@mui/material/CssBaseline';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 function ThemeRootProvider({ children }: IRootProps) {
   const theme = createTheme({

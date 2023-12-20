@@ -1,18 +1,17 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import { IRootParams } from './types';
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import Link from 'next/link';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
@@ -22,17 +21,12 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import * as Styled from './page.styled';
-import { IRootParams } from './types';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
-import { usePathname } from 'next/navigation';
-
 import SelectLanguage from '@components/select-language';
 import { useTheme } from '@mui/material/styles';
-import Image from 'next/image';
-import Tab from '@mui/material/Tab';
-import Tabs from '@mui/material/Tabs';
+
+import * as Styled from './page.styled';
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
