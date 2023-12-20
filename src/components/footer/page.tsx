@@ -52,7 +52,7 @@ function FooterHero({ theme }: { theme: Theme }) {
         },
       }}>
       <Image
-        src="/images/footer-hero.png"
+        src="/images/footer/footer-hero.png"
         alt="Footer Hero"
         fill
         sizes="100%"
@@ -73,7 +73,7 @@ const FooterPage = ({ locale, langHeader: pages, langFooter }: IRootParams) => {
         color: '#f3f3f3',
         minHeight: '15rem',
         padding: '4rem 0',
-        backgroundImage: `url("/images/footer-back.svg")`,
+        backgroundImage: `url("/images/footer/footer-back.svg")`,
         backgroundSize: 'cover',
         backgroundPosition: 'top',
         backgroundRepeat: 'no-repeat',
