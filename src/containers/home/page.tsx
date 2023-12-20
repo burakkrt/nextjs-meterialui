@@ -1,59 +1,74 @@
+'use client';
 import React from 'react';
+import { useTheme } from '@mui/material/styles';
+
 import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Image from 'next/image';
 import Typography from '@mui/material/Typography';
-import { Container } from '@mui/material';
+import Grid from '@mui/material/Grid';
 
 function HomeContainer() {
+  const theme = useTheme();
   return (
-    <Container maxWidth="xl">
-      <Box sx={{ padding: '5rem 0' }}>
-        {/* <Typography variant="h1" gutterBottom>
-        h1. Heading
-      </Typography> */}
-        <Typography variant="h2" gutterBottom>
-          h2. Heading
-        </Typography>
-        <Typography variant="h3" gutterBottom style={{ color: 'red' }}>
-          Geçersiz bir dile gittiğinde not found dosyasını oluştur.
-        </Typography>
-        <Typography variant="h4" gutterBottom>
-          h4. Heading
-        </Typography>
-        <Typography variant="h5" gutterBottom>
-          h5. Heading
-        </Typography>
-        <Typography variant="h6" gutterBottom>
-          h6. Heading
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          subtitle1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis
-          tenetur
-        </Typography>
-        <Typography variant="subtitle2" gutterBottom>
-          subtitle2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis
-          tenetur
-        </Typography>
-        <Typography variant="body1" gutterBottom>
-          body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
-          unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate
-          numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
-        </Typography>
-        <Typography variant="body2" gutterBottom>
-          body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
-          unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate
-          numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
-        </Typography>
-        <Typography variant="button" display="block" gutterBottom>
-          button text
-        </Typography>
-        <Typography variant="caption" display="block" gutterBottom>
-          caption text
-        </Typography>
-        <Typography variant="overline" display="block" gutterBottom>
-          overline text
-        </Typography>
+    <>
+      <Box sx={{ position: 'relative', overflow: 'hidden' }}>
+        <Box
+          sx={{
+            ':before': {
+              content: '""',
+              display: 'block',
+              position: 'absolute',
+              left: '0',
+              top: '0',
+              width: '100%',
+              height: '100%',
+              backgroundColor: 'rgba(0,0,0,0.3)',
+            },
+          }}>
+          <video
+            width="100%"
+            height="100%"
+            style={{ objectFit: 'cover', objectPosition: 'top' }}
+            autoPlay
+            muted
+            loop>
+            <source src="/images/home/welcome-video.mp4" type="video/mp4" />
+          </video>
+        </Box>
+        <Box
+          sx={{
+            position: 'absolute',
+            right: '10%',
+            top: '0',
+            width: '30%',
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: 5,
+          }}>
+          <Box>
+            <Typography
+              variant="h3"
+              component="h6"
+              color="whitesmoke"
+              sx={{ textAlign: 'center', fontWeight: '900' }}>
+              YANGIN SÖNDÜRME CİHAZLARI
+            </Typography>
+            <Typography variant="body1" color="white" sx={{ textAlign: 'center' }}>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, impedit?
+              Exercitationem, ipsam sint. Enim eius libero itaque? Deleniti nisi laborum praesentium
+              iste repellendus corrupti? Similique possimus atque repellendus omnis est.
+            </Typography>
+          </Box>
+          <Box sx={{ position: 'relative', width: 500, height: 370, opacity: '0.9' }}>
+            <Image src="/images/home/fires.png" alt="ddd" fill />
+          </Box>
+        </Box>
       </Box>
-    </Container>
+    </>
   );
 }
 

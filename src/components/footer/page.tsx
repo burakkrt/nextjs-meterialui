@@ -240,8 +240,8 @@ const FooterPage = ({ locale, langHeader: pages, langFooter }: IRootParams) => {
                 {new Date().getFullYear()} © Firma Adı A.Ş. | {copyright}
               </Typography>
               {<SelectLanguage locale={locale} pathname={pathname} />}
-              <Stack direction="row" spacing={4}>
-                {pages.slice(0, 5).map((page, index) => (
+              <Stack direction="row" spacing={{ xs: 2, sm: 4 }} sx={{ flexWrap: 'wrap' }}>
+                {pages.slice(0, 4).map((page, index) => (
                   <Typography
                     key={index}
                     variant="body1"
