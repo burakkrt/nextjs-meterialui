@@ -7,6 +7,8 @@ import Container from '@mui/material/Container';
 import Image from 'next/image';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import MouseIcon from '@mui/icons-material/Mouse';
 
 function HomeContainer() {
   const theme = useTheme();
@@ -23,7 +25,7 @@ function HomeContainer() {
               top: '0',
               width: '100%',
               height: '100%',
-              backgroundColor: 'rgba(0,0,0,0.3)',
+              backgroundColor: 'rgba(0,0,0,0.4)',
             },
           }}>
           <video
@@ -39,32 +41,77 @@ function HomeContainer() {
         <Box
           sx={{
             position: 'absolute',
-            right: '10%',
+            right: '4%',
             top: '0',
-            width: '30%',
+            width: '40%',
             height: '100%',
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
             alignItems: 'center',
             gap: 5,
           }}>
-          <Box>
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 2,
+              marginTop: 15,
+            }}>
             <Typography
-              variant="h3"
+              variant="h2"
               component="h6"
               color="whitesmoke"
-              sx={{ textAlign: 'center', fontWeight: '900' }}>
-              YANGIN SÖNDÜRME CİHAZLARI
+              sx={{
+                borderBottom: '4px solid #BF3131',
+                fontFamily: 'fantasy, monospace',
+                color: '#F6F1F1',
+              }}>
+              Güvenliğinizi ön planda tutan yangın tüplerimizle tanışın!
             </Typography>
-            <Typography variant="body1" color="white" sx={{ textAlign: 'center' }}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, impedit?
-              Exercitationem, ipsam sint. Enim eius libero itaque? Deleniti nisi laborum praesentium
-              iste repellendus corrupti? Similique possimus atque repellendus omnis est.
-            </Typography>
-          </Box>
-          <Box sx={{ position: 'relative', width: 500, height: 370, opacity: '0.9' }}>
-            <Image src="/images/home/fires.png" alt="ddd" fill />
+
+            <Grid container sx={{ backgroundColor: 'rgba(0, 0, 0,0.2)', borderRadius: 1 }}>
+              <Grid item xs={5}>
+                <Box
+                  sx={{
+                    position: 'relative',
+                    width: '100%',
+                    height: '100%',
+                    minHeight: 300,
+                    opacity: '0.9',
+                  }}>
+                  <Image src="/images/home/fires.png" alt="ddd" fill />
+                </Box>
+              </Grid>
+              <Grid item xs={7}>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'start',
+                    justifyContent: 'center',
+                    height: '100%',
+                    width: '100%',
+                    padding: 3,
+                  }}>
+                  <Typography variant="body1" color="white">
+                    Güçlü tasarımıyla öne çıkan ürünlerimiz, etkili söndürme özellikleriyle her an
+                    hazır durumda. Kalitemizden ödün vermeden, size maksimum güvenlik sağlayan
+                    yangın tüpleri için bizi tercih edin. İhtiyacınıza uygun çözümlerle güçlü bir
+                    koruma elde edin, çünkü güvenlik her anınızda bizimle!
+                  </Typography>
+                  <Button
+                    variant="contained"
+                    color="error"
+                    size="large"
+                    sx={{ marginTop: 2 }}
+                    endIcon={<MouseIcon />}>
+                    Hizmetleri İncele
+                  </Button>
+                </Box>
+              </Grid>
+            </Grid>
           </Box>
         </Box>
       </Box>
