@@ -68,7 +68,7 @@ function HomeContainer() {
                 fontFamily: 'fantasy, monospace',
                 color: '#F6F1F1',
               }}>
-              Güvenliğinizi ön planda tutan yangın tüplerimizle tanışın!
+              Lorem ipsum dolor sit amet consectetur adipisicing.
             </Typography>
 
             <Grid container sx={{ backgroundColor: 'rgba(0, 0, 0,0.2)', borderRadius: 1 }}>
@@ -96,10 +96,11 @@ function HomeContainer() {
                     padding: 3,
                   }}>
                   <Typography variant="body1" color="white">
-                    Güçlü tasarımıyla öne çıkan ürünlerimiz, etkili söndürme özellikleriyle her an
-                    hazır durumda. Kalitemizden ödün vermeden, size maksimum güvenlik sağlayan
-                    yangın tüpleri için bizi tercih edin. İhtiyacınıza uygun çözümlerle güçlü bir
-                    koruma elde edin, çünkü güvenlik her anınızda bizimle!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illum eum,
+                    voluptatibus ipsa ratione consectetur perspiciatis maxime illo! Nam beatae
+                    quidem maiores sapiente mollitia voluptates cum fugiat eaque corrupti aliquid?
+                    Repellendus laudantium consequatur dignissimos consequuntur ut aspernatur!
+                    Natus!
                   </Typography>
                   <Button
                     variant="contained"
