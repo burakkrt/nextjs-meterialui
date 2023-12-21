@@ -1,22 +1,20 @@
 'use client';
 import React from 'react';
-import { IRootParams } from './types';
-import SelectLanguage from '../select-language/SelectLanguage';
-
-import Image from 'next/image';
-import { default as NextLink } from 'next/link';
-import { usePathname } from 'next/navigation';
-
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
+import Image from 'next/image';
 import { useTheme } from '@mui/material/styles';
 import Link from '@mui/material/Link';
+import { default as NextLink } from 'next/link';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import Stack from '@mui/material/Stack';
+import { IRootParams } from './types';
+import SelectLanguage from '../select-language/SelectLanguage';
+import { usePathname } from 'next/navigation';
 import { Theme } from '@mui/material/styles';
 
 function FooterHero({ theme }: { theme: Theme }) {
@@ -242,8 +240,8 @@ const FooterPage = ({ locale, langHeader: pages, langFooter }: IRootParams) => {
                 {new Date().getFullYear()} © Firma Adı A.Ş. | {copyright}
               </Typography>
               {<SelectLanguage locale={locale} pathname={pathname} />}
-              <Stack direction="row" spacing={{ xs: 2, sm: 4 }} sx={{ flexWrap: 'wrap' }}>
-                {pages.slice(0, 4).map((page, index) => (
+              <Stack direction="row" spacing={4}>
+                {pages.slice(0, 5).map((page, index) => (
                   <Typography
                     key={index}
                     variant="body1"

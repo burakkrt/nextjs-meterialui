@@ -10,6 +10,8 @@ import HeaderPage from '@/components/header/page';
 import FooterPage from '@/components/footer/page';
 import getLangContent from '@/components/get-lang-contents/getLangHeaders';
 import getLangFooters from '@components/get-lang-contents/getLangFooters';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
+import pick from 'lodash/pick';
 
 import ReduxProvider from '@store/ReduxProvider';
 
@@ -24,6 +26,7 @@ export const metadata: Metadata = {
 
 export default function LocaleLayout({ children, params: { locale } }: IRootParams) {
   unstable_setRequestLocale(locale);
+  const messages = useMessages();
 
   if (!locales.includes(locale as any)) notFound();
 
@@ -31,15 +34,21 @@ export default function LocaleLayout({ children, params: { locale } }: IRootPara
     <html lang={locale}>
       <body>
         <ReduxProvider>
-          <ThemeRootProvider>
-            <HeaderPage locale={locale} langHeader={getLangContent()} />
-            {children}
-            <FooterPage
-              locale={locale}
-              langHeader={getLangContent()}
-              langFooter={getLangFooters()}
-            />
-          </ThemeRootProvider>
+          <NextIntlClientProvider
+            messages={
+              // Only provide the minimum of messages
+              pick(messages, 'Footer')
+            }>
+            <ThemeRootProvider>
+              <HeaderPage locale={locale} langHeader={getLangContent()} />
+              {children}
+              <FooterPage
+                locale={locale}
+                langHeader={getLangContent()}
+                langFooter={getLangFooters()}
+              />
+            </ThemeRootProvider>
+          </NextIntlClientProvider>
         </ReduxProvider>
       </body>
     </html>
