@@ -13,10 +13,10 @@ export async function generateMetadata({ params: { locale } }: IParams) {
 
   // icons ve apple-icons eklemek için takip et :  https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons#image-files-ico-jpg-png
   return {
-    title: multiMetadata('Home.title'),
-    description: multiMetadata('Home.description'),
-    keywords: multiMetadata('Home.keywords'),
-    metadataBase: new URL(multiMetadata('Home.metadataBase.baseUrl')),
+    title: multiMetadata('AboutUs.title'),
+    description: multiMetadata('AboutUs.description'),
+    keywords: multiMetadata('AboutUs.keywords'),
+    metadataBase: new URL(multiMetadata('AboutUs.metadataBase.baseUrl')),
     applicationName: multiMetadata('Base.applicationName'),
     referrer: multiMetadata('Base.referrer'),
     alternates: {
@@ -29,11 +29,11 @@ export async function generateMetadata({ params: { locale } }: IParams) {
       telephone: multiMetadata('Base.formatDetection.telephone'),
     },
     openGraph: {
-      title: multiMetadata('Home.openGraph.title'),
-      description: multiMetadata('Home.openGraph.description'),
+      title: multiMetadata('AboutUs.openGraph.title'),
+      description: multiMetadata('AboutUs.openGraph.description'),
       locale: multiMetadata('Base.openGraph.locale'),
       alternateLocale: langMetaConvert(locales, locale),
-      url: multiMetadata('Home.openGraph.url'),
+      url: multiMetadata('AboutUs.openGraph.url'),
       type: 'website',
       siteName: multiMetadata('Base.openGraph.siteName'),
       images: [
@@ -46,7 +46,7 @@ export async function generateMetadata({ params: { locale } }: IParams) {
           url: '...',
           width: 1800,
           height: 1600,
-          alt: multiMetadata('Home.openGraph.imagesAlt'),
+          alt: multiMetadata('AboutUs.openGraph.imagesAlt'),
         },
       ],
     },

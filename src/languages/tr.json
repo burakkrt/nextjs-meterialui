@@ -42,6 +42,36 @@
         "siteName": "...",
         "imagesAlt": "..."
       }
+    },
+    "Contact": {
+      "title": "Firma Adı",
+      "description": "Bu türkçe bir sayfadır.",
+      "keywords": "kelime1, kelime2",
+      "metadataBase": {
+        "baseUrl": "http://localhost:3000"
+      },
+      "openGraph": {
+        "title": "Anasayfa",
+        "description": "...",
+        "url": "...",
+        "siteName": "...",
+        "imagesAlt": "..."
+      }
+    },
+    "Products": {
+      "title": "Firma Adı",
+      "description": "Bu türkçe bir sayfadır.",
+      "keywords": "kelime1, kelime2",
+      "metadataBase": {
+        "baseUrl": "http://localhost:3000"
+      },
+      "openGraph": {
+        "title": "Anasayfa",
+        "description": "...",
+        "url": "...",
+        "siteName": "...",
+        "imagesAlt": "..."
+      }
     }
   },
   "Header": {
