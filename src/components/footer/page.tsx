@@ -16,6 +16,7 @@ import { IRootParams } from './types';
 import SelectLanguage from '../select-language/SelectLanguage';
 import { usePathname } from 'next/navigation';
 import { Theme } from '@mui/material/styles';
+import footerHero from '@/../public/images/footer/footer-hero.jpg';
 
 function FooterHero({ theme }: { theme: Theme }) {
   return (
@@ -50,9 +51,10 @@ function FooterHero({ theme }: { theme: Theme }) {
         },
       }}>
       <Image
-        src="/images/footer/footer-hero.jpg"
+        src={footerHero}
         alt="Footer Hero"
         fill
+        placeholder="blur"
         sizes="100%"
         style={{ borderRadius: '50%', backgroundColor: 'white' }}
       />
@@ -241,8 +243,8 @@ const FooterPage = ({ locale, langHeader: pages, langFooter }: IRootParams) => {
                 {new Date().getFullYear()} © Firma Adı A.Ş. | {copyright}
               </Typography>
               {<SelectLanguage locale={locale} pathname={pathname} />}
-              <Stack direction="row" spacing={4}>
-                {pages.slice(0, 5).map((page, index) => (
+              <Stack direction="row" spacing={{ xs: 2, sm: 4 }}>
+                {pages.slice(0, 4).map((page, index) => (
                   <Typography
                     key={index}
                     variant="body1"

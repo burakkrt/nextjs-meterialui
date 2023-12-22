@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -7,8 +8,11 @@ import Image from 'next/image';
 import hero1 from '@/../public/images/about/heros/hero-1.jpg';
 import hero2 from '@/../public/images/about/heros/hero-2.jpg';
 import hero3 from '@/../public/images/about/heros/hero-3.jpg';
-
+import { useTheme } from '@mui/material/styles';
+import { useTranslations } from 'next-intl';
 const AboutPage = () => {
+  const theme = useTheme();
+  const t = useTranslations('Body.AboutUs');
   return (
     <>
       <Box
@@ -33,6 +37,9 @@ const AboutPage = () => {
             background: 'linear-gradient(rgba(0, 0, 0, 0.4), rgb(242, 241, 235))',
             zIndex: '1',
           },
+          [theme.breakpoints.down('sm')]: {
+            minHeight: 400,
+          },
         }}>
         <Typography
           variant="h1"
@@ -42,35 +49,64 @@ const AboutPage = () => {
             zIndex: '2',
             textTransform: 'uppercase',
             fontWeight: '900',
+            [theme.breakpoints.down('sm')]: {
+              fontSize: 42,
+            },
           }}>
-          Hakkımızda
+          {t('title')}
         </Typography>
-        <Image
-          src="/images/about/bottom-line.svg"
-          alt="Line"
-          width={400}
-          height={50}
-          style={{
+        <Box
+          sx={{
+            position: 'relative',
             zIndex: '2',
-          }}
-        />
+            width: 400,
+            height: 50,
+            [theme.breakpoints.down('sm')]: {
+              width: 200,
+              height: 30,
+            },
+          }}>
+          <Image src="/images/about/bottom-line.svg" alt="Line" fill sizes="100%" />
+        </Box>
       </Box>
       <Box sx={{ backgroundColor: '#F2F1EB', color: '#272829' }}>
-        <Container maxWidth="xl" sx={{ padding: '8rem 0' }}>
-          <Typography variant="h4" component="h1" sx={{ textAlign: 'center', fontWeight: '700' }}>
-            [Firma Adı] Yangın Söndürme Sistemleri
-          </Typography>
-          <Grid container sx={{ marginTop: 2 }}>
-            <Grid item xs={8} sx={{ margin: '0 auto' }}>
+        <Container
+          maxWidth="xl"
+          sx={{
+            padding: '8rem 0',
+            [theme.breakpoints.down('sm')]: {
+              padding: '4rem 0',
+            },
+          }}>
+          <Grid
+            container
+            rowSpacing={3}
+            sx={{
+              textAlign: 'center',
+              [theme.breakpoints.down('sm')]: {
+                paddingLeft: 2,
+                paddingRight: 2,
+              },
+            }}>
+            <Grid item xs={12} sm={8} sx={{ margin: '0 auto' }}>
+              <Typography variant="h4" component="h1" sx={{ fontWeight: '700' }}>
+                {t('title2')}
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={8} sx={{ margin: '0 auto' }}>
               <Typography variant="body1" component="p">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit vitae vel ut,
-                velit ratione aliquam sed voluptatibus neque ipsum debitis ea, tempora voluptates
-                rem labore molestiae dolore, amet nostrum ullam!
+                {t('title2desc')}
               </Typography>
             </Grid>
           </Grid>
-          <Grid container sx={{ marginTop: 10, backgroundColor: '#EAECCC' }}>
-            <Grid item xs={6} sx={{ margin: 'auto' }}>
+          <Grid
+            container
+            sx={{
+              marginTop: 10,
+              backgroundColor: '#EAECCC',
+              [theme.breakpoints.down('lg')]: { padding: 2 },
+            }}>
+            <Grid item xs={12} lg={6} sx={{ margin: 'auto' }}>
               <Typography
                 variant="h4"
                 component="h2"
@@ -79,27 +115,33 @@ const AboutPage = () => {
                   borderBottom: '2px solid #EEC759',
                   paddingBottom: 1,
                 }}>
-                Hakkımızda
+                {t('AboutUsTitle')}
               </Typography>
               <Typography variant="body1" component="p" sx={{ marginTop: 2 }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut, temporibus
-                praesentium soluta quod totam repudiandae minus aliquam maxime minima quos
-                architecto optio rem exercitationem eius laudantium eaque et fugit. Enim quaerat
-                facilis sint adipisci libero! Laudantium beatae suscipit atque est adipisci quasi
-                molestiae architecto, illum voluptatibus iusto ratione omnis libero ab explicabo
-                excepturi laboriosam eius inventore accusantium officia optio?
+                {t('AboutUsDesc')}
               </Typography>
             </Grid>
             <Grid
               item
-              xs={'auto'}
+              xs={12}
+              lg={'auto'}
               sx={{
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <Box sx={{ position: 'relative', minWidth: 600, minHeight: 400 }}>
+              <Box
+                sx={{
+                  position: 'relative',
+                  minWidth: 600,
+                  minHeight: 400,
+                  [theme.breakpoints.down('sm')]: {
+                    minWidth: 350,
+                    minHeight: 250,
+                    marginTop: 2,
+                  },
+                }}>
                 <Image
                   src={hero1}
                   alt="ddd"
@@ -117,17 +159,29 @@ const AboutPage = () => {
               marginTop: 0,
               backgroundColor: '#183D3D',
               color: 'white',
+              [theme.breakpoints.down('lg')]: { padding: 2 },
             }}>
             <Grid
               item
-              xs={'auto'}
+              xs={12}
+              lg={'auto'}
               sx={{
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <Box sx={{ position: 'relative', minWidth: 600, minHeight: 400 }}>
+              <Box
+                sx={{
+                  position: 'relative',
+                  minWidth: 600,
+                  minHeight: 400,
+                  [theme.breakpoints.down('sm')]: {
+                    minWidth: 350,
+                    minHeight: 250,
+                    marginBottom: 2,
+                  },
+                }}>
                 <Image
                   src={hero2}
                   alt="Vizyon & Misyon"
@@ -138,7 +192,7 @@ const AboutPage = () => {
                 />
               </Box>
             </Grid>
-            <Grid item xs={6} sx={{ margin: 'auto' }}>
+            <Grid item xs={12} lg={6} sx={{ margin: 'auto' }}>
               <Typography
                 variant="h4"
                 component="h3"
@@ -147,20 +201,21 @@ const AboutPage = () => {
                   borderBottom: '2px solid #88AB8E',
                   paddingBottom: 1,
                 }}>
-                Vizyon & Misyon
+                {t('VisionMissionTitle')}
               </Typography>
               <Typography variant="body1" component="p" sx={{ marginTop: 2 }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut, temporibus
-                praesentium soluta quod totam repudiandae minus aliquam maxime minima quos
-                architecto optio rem exercitationem eius laudantium eaque et fugit. Enim quaerat
-                facilis sint adipisci libero! Laudantium beatae suscipit atque est adipisci quasi
-                molestiae architecto, illum voluptatibus iusto ratione omnis libero ab explicabo
-                excepturi laboriosam eius inventore accusantium officia optio?
+                {t('VisionMissionDesc')}
               </Typography>
             </Grid>
           </Grid>
-          <Grid container sx={{ backgroundColor: '#B2533E', color: 'white' }}>
-            <Grid item xs={6} sx={{ margin: 'auto' }}>
+          <Grid
+            container
+            sx={{
+              backgroundColor: '#B2533E',
+              color: 'white',
+              [theme.breakpoints.down('lg')]: { padding: 2 },
+            }}>
+            <Grid item xs={12} lg={6} sx={{ margin: 'auto' }}>
               <Typography
                 variant="h4"
                 component="h3"
@@ -169,27 +224,33 @@ const AboutPage = () => {
                   borderBottom: '2px solid #FF8080',
                   paddingBottom: 1,
                 }}>
-                Çalışmalarımız
+                {t('OurWorkTitle')}
               </Typography>
               <Typography variant="body1" component="p" sx={{ marginTop: 2 }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut, temporibus
-                praesentium soluta quod totam repudiandae minus aliquam maxime minima quos
-                architecto optio rem exercitationem eius laudantium eaque et fugit. Enim quaerat
-                facilis sint adipisci libero! Laudantium beatae suscipit atque est adipisci quasi
-                molestiae architecto, illum voluptatibus iusto ratione omnis libero ab explicabo
-                excepturi laboriosam eius inventore accusantium officia optio?
+                {t('OurWorkDesc')}
               </Typography>
             </Grid>
             <Grid
               item
-              xs={'auto'}
+              xs={12}
+              lg="auto"
               sx={{
                 display: 'flex',
                 flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <Box sx={{ position: 'relative', minWidth: 600, minHeight: 400 }}>
+              <Box
+                sx={{
+                  position: 'relative',
+                  minWidth: 600,
+                  minHeight: 400,
+                  [theme.breakpoints.down('sm')]: {
+                    minWidth: 350,
+                    minHeight: 250,
+                    marginTop: 2,
+                  },
+                }}>
                 <Image
                   src={hero3}
                   alt="ddd"

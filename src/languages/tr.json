@@ -52,6 +52,17 @@
       "desc": "Herhangi bir sorunuz veya yorumunuz var mı ? Bize bir mesaj yazmanız yeterli !",
       "mapTitle": "iletişim Bilgileri",
       "mapDesc": "İletişim kurun, teklif alın, öneride bulunun."
+    },
+    "AboutUs": {
+      "title": "Hakkımızda",
+      "title2": "[Firma Adı] Yangın Söndürme Sistemleri",
+      "title2desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit vitae vel ut, velit ratione aliquam sed voluptatibus neque ipsum debitis ea, tempora voluptates rem labore molestiae dolore, amet nostrum ullam!",
+      "AboutUsTitle": "Hakkımızda",
+      "AboutUsDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut, temporibus praesentium soluta quod totam repudiandae minus aliquam maxime minima quos architecto optio rem exercitationem eius laudantium eaque et fugit. Enim quaerat facilis sint adipisci libero! Laudantium beatae suscipit atque est adipisci quasi molestiae architecto, illum voluptatibus iusto ratione omnis libero ab explicabo excepturi laboriosam eius inventore accusantium officia optio?",
+      "VisionMissionTitle": "Vizyon & Misyon",
+      "VisionMissionDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut, temporibus praesentium soluta quod totam repudiandae minus aliquam maxime minima quos architecto optio rem exercitationem eius laudantium eaque et fugit. Enim quaerat facilis sint adipisci libero! Laudantium beatae suscipit atque est adipisci quasi molestiae architecto, illum voluptatibus iusto ratione omnis libero ab explicabo excepturi laboriosam eius inventore accusantium officia optio?",
+      "OurWorkTitle": "Çalışmalarımız",
+      "OurWorkDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut, temporibus praesentium soluta quod totam repudiandae minus aliquam maxime minima quos architecto optio rem exercitationem eius laudantium eaque et fugit. Enim quaerat facilis sint adipisci libero! Laudantium beatae suscipit atque est adipisci quasi molestiae architecto, illum voluptatibus iusto ratione omnis libero ab explicabo excepturi laboriosam eius inventore accusantium officia optio?"
     }
   }
 }
