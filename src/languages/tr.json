@@ -47,7 +47,11 @@
     "title": "Hoşgeldin Dünya! Bu sayfa Türkçe."
   },
   "Body": {
-    "title": "Güncel haberler hakkında bilgi al",
-    "desc": "Buraya birkaç açıklama ekleyeceğim."
+    "Contact": {
+      "title": "İletişim",
+      "desc": "Herhangi bir sorunuz veya yorumunuz var mı ? Bize bir mesaj yazmanız yeterli !",
+      "mapTitle": "iletişim Bilgileri",
+      "mapDesc": "İletişim kurun, teklif alın, öneride bulunun."
+    }
   }
 }

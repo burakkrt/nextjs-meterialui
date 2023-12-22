@@ -14,14 +14,15 @@ import { useTheme } from '@mui/material/styles';
 import { useTranslations } from 'next-intl';
 const ContactPage = () => {
   const theme = useTheme();
-  const t = useTranslations('Footer');
+  const t = useTranslations('Body');
 
-  console.log(t('contactTitle'));
   return (
     <Box
       sx={{
-        backgroundColor: '#F5F7F8',
+        backgroundColor: '#31304D',
+        color: 'white',
         padding: '4rem 0',
+        minHeight: '100dvh',
         [theme.breakpoints.down('md')]: { marginBottom: 0 },
         marginBottom: 45,
       }}>
@@ -37,10 +38,13 @@ const ContactPage = () => {
             variant="h2"
             component="h1"
             sx={{ fontFamily: 'fantasy, Roboto', textTransform: 'uppercase' }}>
-            İletişim
+            {t('Contact.title')}
           </Typography>
-          <Typography variant="h6" component="p">
-            Herhangi bir sorunuz veya yorumunuz var mı ? Bize bir mesaj yazmanız yeterli !
+          <Typography
+            variant="h6"
+            component="p"
+            sx={{ [theme.breakpoints.down('sm')]: { textAlign: 'center' } }}>
+            {t('Contact.desc')}
           </Typography>
         </Box>
       </Container>
@@ -54,15 +58,21 @@ const ContactPage = () => {
             md={6}
             lg={5}
             xl={4}
-            sx={{ [theme.breakpoints.up('md')]: { minHeight: '70vh' } }}>
+            sx={{ [theme.breakpoints.up('md')]: { minHeight: '600px' } }}>
             <Box
               sx={{
                 padding: 6,
                 color: 'white',
                 backgroundColor: '#011C2A',
-                borderRadius: '8px 0 0 8px',
                 height: '100%',
                 position: 'relative',
+                overflow: 'hidden',
+                [theme.breakpoints.down('sm')]: {
+                  padding: '5rem 2rem',
+                },
+                [theme.breakpoints.up('sm')]: {
+                  borderRadius: '8px 0 0 8px',
+                },
               }}>
               <Typography
                 variant="h5"
@@ -72,15 +82,21 @@ const ContactPage = () => {
                   textTransform: 'uppercase',
                   fontWeight: '700',
                 }}>
-                İletişim Bilgileri
+                {t('Contact.mapTitle')}
               </Typography>
               <Typography
                 variant="body1"
                 component="p"
                 sx={{ marginTop: 1, color: 'rgba(255,255,255,0.7)' }}>
-                İletişim kurun, teklif alın, öneride bulunun.
+                {t('Contact.mapDesc')}
               </Typography>
-              <Box sx={{ marginTop: 10 }}>
+              <Box
+                sx={{
+                  marginTop: 14,
+                  [theme.breakpoints.down('sm')]: {
+                    marginTop: 6,
+                  },
+                }}>
                 <Box
                   sx={{
                     display: 'flex',
@@ -88,6 +104,9 @@ const ContactPage = () => {
                     justifyContent: 'start',
                     alignItems: 'center',
                     gap: 3,
+                    [theme.breakpoints.down('sm')]: {
+                      gap: 1,
+                    },
                   }}>
                   <LocalPhoneIcon sx={{ fontSize: 35 }} />
                   <Typography
@@ -107,6 +126,10 @@ const ContactPage = () => {
                     alignItems: 'center',
                     gap: 3,
                     marginTop: 4,
+                    [theme.breakpoints.down('sm')]: {
+                      gap: 1,
+                      marginTop: 3,
+                    },
                   }}>
                   <EmailIcon sx={{ fontSize: 35 }} />
                   <Typography
@@ -129,6 +152,10 @@ const ContactPage = () => {
                     alignItems: 'center',
                     gap: 3,
                     marginTop: 4,
+                    [theme.breakpoints.down('sm')]: {
+                      gap: 1,
+                      marginTop: 3,
+                    },
                   }}>
                   <LocationOnIcon sx={{ fontSize: 35 }} />
                   <Typography variant="h6" component="span">
@@ -164,7 +191,7 @@ const ContactPage = () => {
             xs={12}
             md={6}
             lg={7}
-            xl={8}
+            xl={6}
             sx={{
               position: 'relative',
               ':before': {
@@ -190,7 +217,13 @@ const ContactPage = () => {
               width="100%"
               height="100%"
               loading="lazy"
-              style={{ borderRadius: '0 8px 8px 0', zIndex: '2', position: 'relative' }}
+              style={{
+                zIndex: '2',
+                position: 'relative',
+                [theme.breakpoints.up('sm')]: {
+                  borderRadius: '0 8px 8px 0',
+                },
+              }}
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen={true}
               aria-hidden="false"

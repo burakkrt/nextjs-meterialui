@@ -34,11 +34,7 @@ export default function LocaleLayout({ children, params: { locale } }: IRootPara
     <html lang={locale}>
       <body>
         <ReduxProvider>
-          <NextIntlClientProvider
-            messages={
-              // Only provide the minimum of messages
-              pick(messages, 'Footer')
-            }>
+          <NextIntlClientProvider messages={pick(messages, 'Body')}>
             <ThemeRootProvider>
               <HeaderPage locale={locale} langHeader={getLangContent()} />
               {children}

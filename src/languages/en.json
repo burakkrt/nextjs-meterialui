@@ -46,7 +46,11 @@
     "title": "Hello world! This page English"
   },
   "Body": {
-    "title": "Get information about current news",
-    "desc": "I'll add a few explanations here."
+    "Contact": {
+      "title": "Contact",
+      "desc": "Do you have any questions or comments? Just write us a message!",
+      "mapTitle": "Contact information",
+      "mapDesc": "Contact, get offers, make suggestions."
+    }
   }
 }
