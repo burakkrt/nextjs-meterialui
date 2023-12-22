@@ -101,7 +101,9 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
                   gap: '0.5rem',
                 }}>
                 <LocalPhoneIcon />
-                <Typography variant="subtitle2">+90 555 555 55 55</Typography>
+                <Typography variant="subtitle2" component="span">
+                  +90 555 555 55 55
+                </Typography>
               </Box>
               <Box
                 sx={{

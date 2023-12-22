@@ -5,6 +5,8 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 import hero1 from '@/../public/images/about/heros/hero-1.jpg';
+import hero2 from '@/../public/images/about/heros/hero-2.jpg';
+import hero3 from '@/../public/images/about/heros/hero-3.jpg';
 
 const AboutPage = () => {
   return (
@@ -127,9 +129,10 @@ const AboutPage = () => {
               }}>
               <Box sx={{ position: 'relative', minWidth: 600, minHeight: 400 }}>
                 <Image
-                  src="/images/about/heros/hero-2.jpg"
-                  alt="ddd"
+                  src={hero2}
+                  alt="Vizyon & Misyon"
                   fill
+                  placeholder="blur"
                   sizes="100%"
                   style={{ objectFit: 'cover', objectPosition: 'center', borderRadius: '8px' }}
                 />
@@ -138,7 +141,7 @@ const AboutPage = () => {
             <Grid item xs={6} sx={{ margin: 'auto' }}>
               <Typography
                 variant="h4"
-                component="h2"
+                component="h3"
                 sx={{
                   fontWeight: '700',
                   borderBottom: '2px solid #88AB8E',
@@ -156,14 +159,14 @@ const AboutPage = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Grid container sx={{ backgroundColor: '#EAECCC' }}>
+          <Grid container sx={{ backgroundColor: '#B2533E', color: 'white' }}>
             <Grid item xs={6} sx={{ margin: 'auto' }}>
               <Typography
                 variant="h4"
-                component="h2"
+                component="h3"
                 sx={{
                   fontWeight: '700',
-                  borderBottom: '2px solid #EEC759',
+                  borderBottom: '2px solid #FF8080',
                   paddingBottom: 1,
                 }}>
                 Çalışmalarımız
@@ -188,9 +191,10 @@ const AboutPage = () => {
               }}>
               <Box sx={{ position: 'relative', minWidth: 600, minHeight: 400 }}>
                 <Image
-                  src="/images/about/heros/hero-1.jpg"
+                  src={hero3}
                   alt="ddd"
                   fill
+                  placeholder="blur"
                   sizes="100%"
                   style={{ objectFit: 'cover', objectPosition: 'center' }}
                 />
