@@ -14,23 +14,29 @@ export async function generateMetadata({ params: { locale } }: IParams) {
 
   // icons ve apple-icons eklemek için takip et :  https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons#image-files-ico-jpg-png
   return {
-    title: multiMetadata('title'),
-    description: multiMetadata('description'),
-    keywords: multiMetadata('keywords'),
-    metadataBase: new URL(multiMetadata('metadataBase.baseUrl')),
-    applicationName: multiMetadata('applicationName'),
+    title: multiMetadata('Home.title'),
+    description: multiMetadata('Home.description'),
+    keywords: multiMetadata('Home.keywords'),
+    metadataBase: new URL(multiMetadata('Home.metadataBase.baseUrl')),
+    applicationName: multiMetadata('Base.applicationName'),
+    referrer: multiMetadata('Base.referrer'),
     alternates: {
       canonical: '/',
       languages: langCanonicalUrls(locales, locale),
     },
+    formatDetection: {
+      email: multiMetadata('Base.formatDetection.email'),
+      address: multiMetadata('Base.formatDetection.address'),
+      telephone: multiMetadata('Base.formatDetection.telephone'),
+    },
     openGraph: {
-      title: multiMetadata('openGraph.title'),
-      description: multiMetadata('openGraph.description'),
-      locale: multiMetadata('openGraph.locale'),
+      title: multiMetadata('Home.openGraph.title'),
+      description: multiMetadata('Home.openGraph.description'),
+      locale: multiMetadata('Base.openGraph.locale'),
       alternateLocale: langMetaConvert(locales, locale),
-      url: multiMetadata('openGraph.url'),
+      url: multiMetadata('Home.openGraph.url'),
       type: 'website',
-      siteName: multiMetadata('openGraph.siteName'),
+      siteName: multiMetadata('Base.openGraph.siteName'),
       images: [
         {
           url: '...',
@@ -41,7 +47,7 @@ export async function generateMetadata({ params: { locale } }: IParams) {
           url: '...',
           width: 1800,
           height: 1600,
-          alt: multiMetadata('openGraph.imagesAlt'),
+          alt: multiMetadata('Home.openGraph.imagesAlt'),
         },
       ],
     },
