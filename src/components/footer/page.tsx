@@ -50,7 +50,7 @@ function FooterHero({ theme }: { theme: Theme }) {
         },
       }}>
       <Image
-        src="/images/footer/footer-hero.png"
+        src="/images/footer/footer-hero.jpg"
         alt="Footer Hero"
         fill
         sizes="100%"
