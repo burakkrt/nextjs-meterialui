@@ -155,9 +155,10 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
                 component="a"
                 href={`/${locale ?? locale}`}
                 sx={{
-                  fontWeight: 700,
+                  fontWeight: 900,
                   color: 'inherit',
                   textDecoration: 'none',
+                  fontFamily: 'Macondo',
                 }}>
                 FİRMA ADI
               </Typography>
