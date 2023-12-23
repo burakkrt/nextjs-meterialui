@@ -122,7 +122,10 @@
     },
     "Products": {
       "title": "Ürünler",
-      "breadcrumbsHome": "Anasayfa"
+      "breadcrumbsHome": "Anasayfa",
+      "categories": "Kategoriler",
+      "searchPlaceholder": "Ürün Ara",
+      "goContactButton": "Hemen Sipariş Verin"
     },
     "Home": {
       "welcomeTitle": "Lorem ipsum dolor sit amet consectetur adipisicing.",

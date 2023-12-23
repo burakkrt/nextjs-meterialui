@@ -2,18 +2,54 @@ import { IProductDatas } from './types';
 import { ICategoryPriority } from './types';
 
 const productsData: Array<IProductDatas> = [
-  { title: 'The Shawshank Redemption', year: 1994, category: 'ilk' },
-  { title: 'The Godfather', year: 1972, category: 'ilk' },
-  { title: 'The Godfather', year: 1972, category: 'ikinci' },
-  { title: 'The Godfather 2', year: 1972, category: 'ilk' },
-  { title: 'The Godfather 2', year: 1972, category: 'üçüncü' },
-  { title: 'The Godfather 3', year: 1972, category: 'ikinci' },
+  {
+    title: 'Sprinkler Söndürme Sistemleri',
+    category: 'Sulu Söndürme Sistemleri',
+    path: '',
+    imageUrl: '/images/products/f1.jpg',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos reprehenderit,minus velit autem fugiat odit nostrum, dolores vel expedita, officiis optio mollitia eaque labore delectus eveniet recusandae rerum distinctio?',
+  },
+  {
+    title: 'Yangın Pompaları',
+    category: 'Sulu Söndürme Sistemleri',
+    path: '',
+    imageUrl: '/images/products/f2.jpg',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos reprehenderit,minus velit autem fugiat odit nostrum, dolores vel expedita, officiis optio mollitia eaque labore delectus eveniet recusandae rerum distinctio?',
+  },
+  {
+    title: 'Yangın Dolapları',
+    category: 'Sulu Söndürme Sistemleri',
+    path: '',
+    imageUrl: '/images/products/f3.jpg',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos reprehenderit,minus velit autem fugiat odit nostrum, dolores vel expedita, officiis optio mollitia eaque labore delectus eveniet recusandae rerum distinctio?',
+  },
+  {
+    title: 'Yangın Hidrant Sistemleri',
+    category: 'Sulu Söndürme Sistemleri',
+    path: '',
+    imageUrl: '/images/products/f4.jpg',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos reprehenderit,minus velit autem fugiat odit nostrum, dolores vel expedita, officiis optio mollitia eaque labore delectus eveniet recusandae rerum distinctio?',
+  },
+  {
+    title: 'Water Mist (Su Sisi) Söndürme Sistemleri',
+    category: 'Sulu Söndürme Sistemleri',
+    path: '',
+    imageUrl: '/images/products/f5.jpg',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos reprehenderit,minus velit autem fugiat odit nostrum, dolores vel expedita, officiis optio mollitia eaque labore delectus eveniet recusandae rerum distinctio?',
+  },
 ];
 
 export const categoryPriority: ICategoryPriority = {
-  ilk: 1,
-  ikinci: 2,
-  üçüncü: 3,
+  'Sulu Söndürme Sistemleri': 1,
+  'Manuel Söndürme Sistemleri': 2,
+  'Manuel Söndürme Sistemleri2': 3,
+  'Manuel Söndürme Sistemleri3': 4,
+  'Manuel Söndürme Sistemleri4': 5,
 };
 
 const sortCategory: IProductDatas[] = productsData.toSorted((a, b) => {

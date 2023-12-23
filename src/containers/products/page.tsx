@@ -1,8 +1,11 @@
 'use client';
-import React from 'react';
-
-import { useTheme } from '@mui/material/styles';
+import React, { useEffect, useState } from 'react';
+import { IRootParams } from './types';
 import { useTranslations } from 'next-intl';
+import { categoryPriority } from '@data/products/products';
+import { IProductDatas } from '@data/products/types';
+import ProductsData from '@data/products/products';
+import ProductList from '@/components/product-list';
 
 import Link from 'next/link';
 
@@ -10,32 +13,51 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Image from 'next/image';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
-
 import HomeIcon from '@mui/icons-material/Home';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
-import { IRootParams } from './types';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
-import ProductsData from '@data/products/products';
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import { categoryPriority } from '@data/products/products';
-
-const renderCategories = () => {
-  return (
-    <Stack spacing={0}>
-      {Object.keys(categoryPriority).map((category, index) => (
-        <Button key={index}>{category}</Button>
-      ))}
-    </Stack>
-  );
-};
+import ButtonGroup from '@mui/material/ButtonGroup';
+import { useTheme } from '@mui/material/styles';
 
 const ProductsContainer = ({ locale }: IRootParams) => {
   const theme = useTheme();
   const t = useTranslations('Body.Products');
+  const [activeCategory, setActiveCategory] = useState<string>('all');
+  const [searchProduct, setSearchProduct] = useState<IProductDatas | null>(null);
+  const [data, setData] = useState<Array<IProductDatas>>(ProductsData);
+
+  const handleCategory = (category: string) => {
+    setSearchProduct(null);
+    setActiveCategory(category);
+
+    const element = document.getElementById('products');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleSearchProduct = (selectProduct: IProductDatas | null) => {
+    setActiveCategory('all');
+    setSearchProduct(selectProduct);
+
+    const element = document.getElementById('products');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  useEffect(() => {
+    if (activeCategory === 'all' && searchProduct === null) {
+      setData(ProductsData);
+    } else if (activeCategory !== 'all') {
+      setData(ProductsData.filter((product) => product.category === activeCategory));
+    } else if (searchProduct !== null) {
+      setData(ProductsData.filter((product) => product.title === searchProduct?.title));
+    }
+  }, [searchProduct, activeCategory]);
 
   return (
     <>
@@ -101,35 +123,113 @@ const ProductsContainer = ({ locale }: IRootParams) => {
       </Box>
       <Box sx={{ backgroundColor: '#820300' }}>
         <Container maxWidth="xl">
-          <Grid
-            container
-            columnSpacing={2}
-            sx={{ minHeight: '100vh', color: 'white', padding: '8rem 0' }}>
-            <Grid item xs={4} sx={{ backgroundColor: 'white', color: 'black', padding: 2 }}>
+          <Grid container sx={{ minHeight: '100vh', padding: '8rem 0', position: 'relative' }}>
+            <Box
+              sx={{
+                [theme.breakpoints.up('sm')]: { display: 'none' },
+                position: 'sticky',
+                top: 0,
+                width: '100%',
+                backgroundColor: 'white',
+                zIndex: 11,
+                padding: 2,
+              }}>
+              <Autocomplete
+                id="products-search"
+                options={ProductsData}
+                groupBy={(option) => option.category}
+                getOptionLabel={(option) => option.title}
+                renderInput={(params) => <TextField {...params} label={t('searchPlaceholder')} />}
+                onChange={(e, selectProduct) => handleSearchProduct(selectProduct)}
+                value={searchProduct}
+                sx={{ borderRadius: 1 }}
+              />
+            </Box>
+            <Grid
+              item
+              xs={12}
+              sm={5}
+              lg={4}
+              xl={3}
+              sx={{
+                color: 'black',
+                padding: 2,
+                backgroundColor: '#F5F7F8',
+                borderRight: '1px solid rgba(0,0,0,0.2)',
+              }}>
               <Box sx={{ position: 'sticky', top: 10 }}>
-                <Box>
+                <Box sx={{ [theme.breakpoints.down('sm')]: { display: 'none' } }}>
                   <Autocomplete
                     id="products-search"
                     options={ProductsData}
                     groupBy={(option) => option.category}
                     getOptionLabel={(option) => option.title}
-                    renderInput={(params) => <TextField {...params} label="Ürün Ara" />}
-                    onChange={(e, value) => console.log(value)}
+                    renderInput={(params) => (
+                      <TextField {...params} label={t('searchPlaceholder')} />
+                    )}
+                    onChange={(e, selectProduct) => handleSearchProduct(selectProduct)}
+                    value={searchProduct}
+                    sx={{ borderRadius: 1 }}
                   />
                 </Box>
-                <Box>{renderCategories()}</Box>
+                <Box sx={{ marginTop: 3, textAlign: 'center' }}>
+                  <Link href={`/${locale}/contact`} style={{ display: 'inline-block' }}>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                      <ShoppingBasketIcon /> {t('goContactButton')}
+                    </Button>
+                  </Link>
+                </Box>
+
+                <Box sx={{ marginTop: 1.5 }}>
+                  <Typography variant="body1" component="p" sx={{ lineHeight: 2.5 }}>
+                    {t('categories')}
+                  </Typography>
+                  <ButtonGroup
+                    orientation="vertical"
+                    aria-label="vertical contained button group"
+                    variant="text"
+                    color="inherit"
+                    sx={{ width: '100%', border: '1px solid rgba(0,0,0,0.2)' }}>
+                    {Object.keys(categoryPriority).map((category, index) => (
+                      <Button
+                        key={index}
+                        onClick={() => handleCategory(category)}
+                        sx={{
+                          color: `${category === activeCategory ? 'white' : '#61677A'}`,
+                          justifyContent: 'start',
+                          backgroundColor: `${category === activeCategory ? '#99B080' : 'none'}`,
+                          ':hover': {
+                            backgroundColor: `${category === activeCategory ? '#99B080;' : ''}`,
+                          },
+                        }}>
+                        <Typography variant="body1" component="span" sx={{ marginLeft: 2 }}>
+                          {category}
+                        </Typography>
+                      </Button>
+                    ))}
+                  </ButtonGroup>
+                </Box>
               </Box>
             </Grid>
-            <Grid item xs={8}>
-              {Array(20)
-                .fill(0)
-                .map((_, index) => (
-                  <Typography key={index}>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis quasi
-                    quibusdam rerum deleniti architecto? Vel nobis quasi accusantium vitae hic odit
-                    blanditiis qui enim excepturi ut. Quam fugiat perspiciatis quod.
-                  </Typography>
-                ))}
+            <Grid item xs={12} sm={7} lg={8} xl={9}>
+              <Box
+                sx={{
+                  width: '100%',
+                  height: '100%',
+                  backgroundColor: '#F5F7F8',
+                  padding: 2,
+                  [theme.breakpoints.down('sm')]: {
+                    paddingTop: 12,
+                  },
+                }}
+                id="products">
+                <Grid container spacing={2}>
+                  <ProductList data={data} locale={locale} />
+                </Grid>
+              </Box>
             </Grid>
           </Grid>
         </Container>

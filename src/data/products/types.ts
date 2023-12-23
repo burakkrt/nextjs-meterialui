@@ -4,6 +4,8 @@ export interface ICategoryPriority {
 
 export interface IProductDatas {
   title: string;
-  year: number;
   category: string;
+  path: string;
+  imageUrl: string;
+  description: string;
 }

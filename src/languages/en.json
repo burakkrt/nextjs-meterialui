@@ -125,7 +125,10 @@
     },
     "Products": {
       "title": "Products",
-      "breadcrumbsHome": "Home"
+      "breadcrumbsHome": "Home",
+      "categories": "Categories",
+      "searchPlaceholder": "Search Product",
+      "goContactButton": "Order Now"
     },
     "Home": {
       "welcomeTitle": "Lorem ipsum dolor sit amet consectetur adipisicing.",
