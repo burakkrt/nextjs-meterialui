@@ -7,8 +7,11 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import MouseIcon from '@mui/icons-material/Mouse';
+import { useTranslations } from 'next-intl';
 
 function HomeWelcome({ theme }: IRootParams) {
+  const t = useTranslations('Body.Home');
+
   return (
     <Box sx={{ position: 'relative', overflow: 'hidden' }}>
       <Box
@@ -102,7 +105,7 @@ function HomeWelcome({ theme }: IRootParams) {
                 lineHeight: 1,
               },
             }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing.
+            {t('welcomeTitle')}
           </Typography>
 
           <Grid
@@ -145,10 +148,7 @@ function HomeWelcome({ theme }: IRootParams) {
                   variant="body1"
                   color="#191919"
                   sx={{ [theme.breakpoints.up('lg')]: { color: 'white' } }}>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illum eum,
-                  voluptatibus ipsa ratione consectetur perspiciatis maxime illo! Nam beatae quidem
-                  maiores sapiente mollitia voluptates cum fugiat eaque corrupti aliquid?
-                  Repellendus laudantium consequatur dignissimos consequuntur ut aspernatur! Natus!
+                  {t('welcomeDesc')}
                 </Typography>
                 <Button
                   variant="contained"

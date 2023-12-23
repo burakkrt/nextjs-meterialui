@@ -23,7 +23,6 @@ const ContactContainer = ({ locale }: IRootParams) => {
 
   return (
     <>
-      {' '}
       <Box
         sx={{
           backgroundImage: 'url("/images/contact/contact-hero.jpg")',
@@ -278,22 +277,26 @@ const ContactContainer = ({ locale }: IRootParams) => {
                   minHeight: '50vh',
                 },
               }}>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192698.64616681487!2d28.847373737387183!3d41.00520413827649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1702993753819!5m2!1str!2str"
-                width="100%"
-                height="100%"
-                loading="lazy"
-                style={{
+              <Box
+                sx={{
                   zIndex: '2',
                   position: 'relative',
+                  height: '100%',
+                  width: '100%',
                   [theme.breakpoints.up('sm')]: {
                     borderRadius: '0 8px 8px 0',
                   },
-                }}
-                referrerPolicy="no-referrer-when-downgrade"
-                allowFullScreen={true}
-                aria-hidden="false"
-                tabIndex={0}></iframe>
+                }}>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192698.64616681487!2d28.847373737387183!3d41.00520413827649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1702993753819!5m2!1str!2str"
+                  width="100%"
+                  height="100%"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen={true}
+                  aria-hidden="false"
+                  tabIndex={0}></iframe>
+              </Box>
             </Grid>
           </Grid>
         </Container>
