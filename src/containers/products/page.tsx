@@ -16,10 +16,27 @@ import Breadcrumbs from '@mui/material/Breadcrumbs';
 import HomeIcon from '@mui/icons-material/Home';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { IRootParams } from './types';
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
+import ProductsData from '@data/products/products';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import { categoryPriority } from '@data/products/products';
+
+const renderCategories = () => {
+  return (
+    <Stack spacing={0}>
+      {Object.keys(categoryPriority).map((category, index) => (
+        <Button key={index}>{category}</Button>
+      ))}
+    </Stack>
+  );
+};
 
 const ProductsContainer = ({ locale }: IRootParams) => {
   const theme = useTheme();
   const t = useTranslations('Body.Products');
+
   return (
     <>
       <Box
@@ -84,7 +101,37 @@ const ProductsContainer = ({ locale }: IRootParams) => {
       </Box>
       <Box sx={{ backgroundColor: '#820300' }}>
         <Container maxWidth="xl">
-          <Box sx={{ minHeight: '100vh' }}></Box>
+          <Grid
+            container
+            columnSpacing={2}
+            sx={{ minHeight: '100vh', color: 'white', padding: '8rem 0' }}>
+            <Grid item xs={4} sx={{ backgroundColor: 'white', color: 'black', padding: 2 }}>
+              <Box sx={{ position: 'sticky', top: 10 }}>
+                <Box>
+                  <Autocomplete
+                    id="products-search"
+                    options={ProductsData}
+                    groupBy={(option) => option.category}
+                    getOptionLabel={(option) => option.title}
+                    renderInput={(params) => <TextField {...params} label="Ürün Ara" />}
+                    onChange={(e, value) => console.log(value)}
+                  />
+                </Box>
+                <Box>{renderCategories()}</Box>
+              </Box>
+            </Grid>
+            <Grid item xs={8}>
+              {Array(20)
+                .fill(0)
+                .map((_, index) => (
+                  <Typography key={index}>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis quasi
+                    quibusdam rerum deleniti architecto? Vel nobis quasi accusantium vitae hic odit
+                    blanditiis qui enim excepturi ut. Quam fugiat perspiciatis quod.
+                  </Typography>
+                ))}
+            </Grid>
+          </Grid>
         </Container>
       </Box>
     </>
