@@ -53,8 +53,8 @@ export async function generateMetadata({ params: { locale } }: IParams) {
   };
 }
 
-const AboutPage = () => {
-  return <AboutContainer />;
+const AboutPage = ({ params: { locale } }: IParams) => {
+  return <AboutContainer locale={locale} />;
 };
 
 export default AboutPage;

@@ -87,7 +87,7 @@
       },
       "page3": {
         "label": "Ürünler",
-        "path": "/product"
+        "path": "/products"
       },
       "page4": {
         "label": "İletişim",
@@ -100,15 +100,13 @@
     "contactTitle": "İletişim",
     "copyright": "Tüm Hakları Saklıdır."
   },
-  "Index": {
-    "title": "Hoşgeldin Dünya! Bu sayfa Türkçe."
-  },
   "Body": {
     "Contact": {
       "title": "İletişim",
       "desc": "Herhangi bir sorunuz veya yorumunuz var mı ? Bize bir mesaj yazmanız yeterli !",
       "mapTitle": "iletişim Bilgileri",
-      "mapDesc": "İletişim kurun, teklif alın, öneride bulunun."
+      "mapDesc": "İletişim kurun, teklif alın, öneride bulunun.",
+      "breadcrumbsHome": "Anasayfa"
     },
     "AboutUs": {
       "title": "Hakkımızda",
@@ -119,7 +117,12 @@
       "VisionMissionTitle": "Vizyon & Misyon",
       "VisionMissionDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut, temporibus praesentium soluta quod totam repudiandae minus aliquam maxime minima quos architecto optio rem exercitationem eius laudantium eaque et fugit. Enim quaerat facilis sint adipisci libero! Laudantium beatae suscipit atque est adipisci quasi molestiae architecto, illum voluptatibus iusto ratione omnis libero ab explicabo excepturi laboriosam eius inventore accusantium officia optio?",
       "OurWorkTitle": "Çalışmalarımız",
-      "OurWorkDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut, temporibus praesentium soluta quod totam repudiandae minus aliquam maxime minima quos architecto optio rem exercitationem eius laudantium eaque et fugit. Enim quaerat facilis sint adipisci libero! Laudantium beatae suscipit atque est adipisci quasi molestiae architecto, illum voluptatibus iusto ratione omnis libero ab explicabo excepturi laboriosam eius inventore accusantium officia optio?"
+      "OurWorkDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut, temporibus praesentium soluta quod totam repudiandae minus aliquam maxime minima quos architecto optio rem exercitationem eius laudantium eaque et fugit. Enim quaerat facilis sint adipisci libero! Laudantium beatae suscipit atque est adipisci quasi molestiae architecto, illum voluptatibus iusto ratione omnis libero ab explicabo excepturi laboriosam eius inventore accusantium officia optio?",
+      "breadcrumbsHome": "Anasayfa"
+    },
+    "Products": {
+      "title": "Ürünler",
+      "breadcrumbsHome": "Anasayfa"
     }
   }
 }

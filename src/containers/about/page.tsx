@@ -11,7 +11,13 @@ import hero3 from '@/../public/images/about/heros/hero-3.jpg';
 import { useTheme } from '@mui/material/styles';
 import { useTranslations } from 'next-intl';
 
-const AboutPage = () => {
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Link from 'next/link';
+import HomeIcon from '@mui/icons-material/Home';
+import InfoIcon from '@mui/icons-material/Info';
+import { IRootParams } from './types';
+
+const AboutPage = ({ locale }: IRootParams) => {
   const theme = useTheme();
   const t = useTranslations('Body.AboutUs');
 
@@ -20,7 +26,7 @@ const AboutPage = () => {
       <Box
         sx={{
           backgroundImage: 'url("/images/about/about-hero.jpg")',
-          backgroundPosition: 'center',
+          backgroundPosition: 'bottom',
           backgroundSize: 'cover',
           position: 'relative',
           minHeight: '500px',
@@ -36,7 +42,7 @@ const AboutPage = () => {
             left: 0,
             width: '100%',
             height: '100%',
-            background: 'linear-gradient(rgba(0, 0, 0, 0.4), rgb(242, 241, 235))',
+            background: 'linear-gradient(rgba(0, 0, 0, 0.4), #0E2954)',
             zIndex: '1',
           },
           [theme.breakpoints.down('sm')]: {
@@ -44,34 +50,40 @@ const AboutPage = () => {
           },
         }}>
         <Typography
-          variant="h1"
+          variant="h2"
           component="span"
           sx={{
-            color: '#272829',
+            color: 'white',
             zIndex: '2',
             textTransform: 'uppercase',
             fontWeight: '900',
+            letterSpacing: 5,
             [theme.breakpoints.down('sm')]: {
               fontSize: 42,
             },
           }}>
           {t('title')}
         </Typography>
-        <Box
-          sx={{
-            position: 'relative',
-            zIndex: '2',
-            width: 400,
-            height: 50,
-            [theme.breakpoints.down('sm')]: {
-              width: 200,
-              height: 30,
-            },
-          }}>
-          <Image src="/images/about/bottom-line.svg" alt="Line" fill sizes="100%" />
-        </Box>
+        <Breadcrumbs aria-label="breadcrumb" sx={{ zIndex: 111, color: 'white', marginTop: 2 }}>
+          <Link
+            style={{
+              color: 'inherit',
+              display: 'flex',
+              alignItems: 'center',
+              fontSize: '1rem',
+            }}
+            color="inherit"
+            href={`/${locale}`}>
+            <HomeIcon sx={{ mr: 1, fontSize: 22 }} fontSize="inherit" />
+            {t('breadcrumbsHome')}
+          </Link>
+          <Typography variant="body1" sx={{ display: 'flex', alignItems: 'center' }}>
+            <InfoIcon sx={{ mr: 1, fontSize: 22 }} fontSize="inherit" />
+            {t('title')}
+          </Typography>
+        </Breadcrumbs>
       </Box>
-      <Box sx={{ backgroundColor: '#F2F1EB', color: '#272829' }}>
+      <Box sx={{ backgroundColor: '#0E2954', color: 'white' }}>
         <Container
           maxWidth="xl"
           sx={{
@@ -106,6 +118,7 @@ const AboutPage = () => {
             sx={{
               marginTop: 10,
               backgroundColor: '#EAECCC',
+              color: '#272829',
               [theme.breakpoints.down('lg')]: { padding: 2 },
             }}>
             <Grid item xs={12} lg={6} sx={{ margin: 'auto' }}>
