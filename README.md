@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+### [Go Live](https://peaceful-gelato-d3f31e.netlify.app/tr)
+
 First, run the development server:
 
 ```bash
