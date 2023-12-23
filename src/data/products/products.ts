@@ -7,40 +7,35 @@ const productsData: Array<IProductDatas> = [
     category: 'Sulu Söndürme Sistemleri',
     path: '',
     imageUrl: '/images/products/f1.jpg',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos reprehenderit,minus velit autem fugiat odit nostrum, dolores vel expedita, officiis optio mollitia eaque labore delectus eveniet recusandae rerum distinctio?',
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos reprehenderit,minus velit autem fugiat odit nostrum, dolores vel expedita, officiis optio mollitia eaque labore delectus eveniet recusandae rerum distinctio?',
   },
   {
     title: 'Yangın Pompaları',
     category: 'Sulu Söndürme Sistemleri',
     path: '',
     imageUrl: '/images/products/f2.jpg',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos reprehenderit,minus velit autem fugiat odit nostrum, dolores vel expedita, officiis optio mollitia eaque labore delectus eveniet recusandae rerum distinctio?',
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos reprehenderit,minus velit autem fugiat odit nostrum, dolores vel expedita, officiis optio mollitia eaque labore delectus eveniet recusandae rerum distinctio?',
   },
   {
     title: 'Yangın Dolapları',
     category: 'Sulu Söndürme Sistemleri',
     path: '',
     imageUrl: '/images/products/f3.jpg',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos reprehenderit,minus velit autem fugiat odit nostrum, dolores vel expedita, officiis optio mollitia eaque labore delectus eveniet recusandae rerum distinctio?',
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos reprehenderit,minus velit autem fugiat odit nostrum, dolores vel expedita, officiis optio mollitia eaque labore delectus eveniet recusandae rerum distinctio?',
   },
   {
     title: 'Yangın Hidrant Sistemleri',
     category: 'Sulu Söndürme Sistemleri',
     path: '',
     imageUrl: '/images/products/f4.jpg',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos reprehenderit,minus velit autem fugiat odit nostrum, dolores vel expedita, officiis optio mollitia eaque labore delectus eveniet recusandae rerum distinctio?',
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos reprehenderit,minus velit autem fugiat odit nostrum, dolores vel expedita, officiis optio mollitia eaque labore delectus eveniet recusandae rerum distinctio?',
   },
   {
     title: 'Water Mist (Su Sisi) Söndürme Sistemleri',
     category: 'Sulu Söndürme Sistemleri',
     path: '',
     imageUrl: '/images/products/f5.jpg',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos reprehenderit,minus velit autem fugiat odit nostrum, dolores vel expedita, officiis optio mollitia eaque labore delectus eveniet recusandae rerum distinctio?',
+    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quos reprehenderit,minus velit autem fugiat odit nostrum, dolores vel expedita, officiis optio mollitia eaque labore delectus eveniet recusandae rerum distinctio?',
   },
 ];
 

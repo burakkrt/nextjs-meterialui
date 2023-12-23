@@ -55,7 +55,7 @@ const ProductList = ({ data, locale }: IRootParams) => {
           />
         </CardMedia>
         <CardContent>
-          <Typography variant="body2">{product.description.slice(0, 200)}...</Typography>
+          <Typography variant="body2">{product.desc.slice(0, 200)}...</Typography>
         </CardContent>
         {/* <CardActions>
           <Link href="/">

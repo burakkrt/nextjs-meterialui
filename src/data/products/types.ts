@@ -7,5 +7,5 @@ export interface IProductDatas {
   category: string;
   path: string;
   imageUrl: string;
-  description: string;
+  desc: string;
 }
