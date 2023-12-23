@@ -47,11 +47,11 @@ export const categoryPriority: ICategoryPriority = {
   'Manuel Söndürme Sistemleri4': 5,
 };
 
-const sortCategory: IProductDatas[] = productsData.toSorted((a, b) => {
+productsData.sort((a, b) => {
   const priorityA = categoryPriority[a.category] || Object.keys(categoryPriority).length++;
   const priorityB = categoryPriority[b.category] || Object.keys(categoryPriority).length++;
 
   return priorityA - priorityB;
 });
 
-export default sortCategory;
+export default productsData;
