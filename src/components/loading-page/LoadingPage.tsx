@@ -11,6 +11,7 @@ function Loading() {
         backgroundColor: 'rgba(0,0,0,0.6)',
         zIndex: 99,
         flexDirection: 'column',
+        position: 'absolute',
       }}
       open={true}>
       <CircularProgress color="inherit" />
