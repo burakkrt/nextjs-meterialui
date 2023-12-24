@@ -129,7 +129,8 @@
     },
     "Home": {
       "welcomeTitle": "Lorem ipsum dolor sit amet consectetur adipisicing.",
-      "welcomeDesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illum eum, voluptatibus ipsa ratione consectetur perspiciatis maxime illo! Nam beatae quidem maiores sapiente mollitia voluptates cum fugiat eaque corrupti aliquid? Repellendus laudantium consequatur dignissimos consequuntur ut aspernatur! Natus!"
+      "welcomeDesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illum eum, voluptatibus ipsa ratione consectetur perspiciatis maxime illo! Nam beatae quidem maiores sapiente mollitia voluptates cum fugiat eaque corrupti aliquid? Repellendus laudantium consequatur dignissimos consequuntur ut aspernatur! Natus!",
+      "welcomeButton": "Hizmetleri İncele"
     }
   }
 }
