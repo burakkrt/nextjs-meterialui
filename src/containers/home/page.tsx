@@ -4,7 +4,7 @@ import HomeWelcome from '@/components/home-welcome';
 import { useTheme } from '@mui/material/styles';
 import Referances from '@components/referances';
 
-async function HomeContainer() {
+function HomeContainer() {
   const theme = useTheme();
 
   return (
