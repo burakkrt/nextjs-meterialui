@@ -2,6 +2,7 @@
 import React from 'react';
 import HomeWelcome from '@/components/home-welcome';
 import { useTheme } from '@mui/material/styles';
+import Referances from '@components/referances';
 
 async function HomeContainer() {
   const theme = useTheme();
@@ -9,6 +10,7 @@ async function HomeContainer() {
   return (
     <>
       <HomeWelcome theme={theme} />
+      <Referances />
     </>
   );
 }
