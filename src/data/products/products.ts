@@ -322,16 +322,6 @@ const productsData: Array<IProductDatas> = [
     descEng:
       'Portable fire extinguisher cabinet is a special storage unit designed to store fire extinguishing equipment in a portable and orderly manner. It usually includes fire extinguishers as well as firefighting blankets and other related supplies.',
   },
-  {
-    title: '',
-    category: '',
-    path: '',
-    imageUrl: '/images/products/',
-    desc: '',
-    titleEng: '',
-    categoryEng: '',
-    descEng: '',
-  },
 ];
 
 export const categoryPriority: ICategoryPriority = {

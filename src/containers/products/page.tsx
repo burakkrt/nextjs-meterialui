@@ -221,13 +221,15 @@ const ProductsContainer = ({ locale }: IRootParams) => {
                         sx={{
                           color: `${category === activeCategory ? 'white' : '#61677A'}`,
                           justifyContent: 'start',
-                          marginLeft: 1,
                           backgroundColor: `${category === activeCategory ? '#99B080' : 'none'}`,
                           ':hover': {
                             backgroundColor: `${category === activeCategory ? '#99B080;' : ''}`,
                           },
                         }}>
-                        <Typography variant="body1" component="span" sx={{ textAlign: 'start' }}>
+                        <Typography
+                          variant="body1"
+                          component="span"
+                          sx={{ textAlign: 'start', marginLeft: 1 }}>
                           {category}
                         </Typography>
                       </Button>

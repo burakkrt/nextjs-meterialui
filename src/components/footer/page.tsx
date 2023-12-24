@@ -56,7 +56,12 @@ function FooterHero({ theme }: { theme: Theme }) {
         fill
         placeholder="blur"
         sizes="100%"
-        style={{ borderRadius: '50%', backgroundColor: 'white' }}
+        style={{
+          borderRadius: '50%',
+          backgroundColor: 'white',
+          objectFit: 'cover',
+          objectPosition: 'center',
+        }}
       />
     </Box>
   );
