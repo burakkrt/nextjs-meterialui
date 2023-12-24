@@ -7,6 +7,8 @@ import { locales } from '@/i18n';
 import ThemeRootProvider from '@/components/theme-provider/ThemeProvider';
 import HeaderPage from '@/components/header/page';
 import getLangContent from '@/components/get-lang-contents/getLangHeaders';
+import getLangFooters from '@components/get-lang-contents/getLangFooters';
+import FooterPage from '@/components/footer/page';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 import pick from 'lodash/pick';
 
@@ -30,6 +32,11 @@ export default function LocaleLayout({ children, params: { locale } }: IRootPara
             <ThemeRootProvider>
               <HeaderPage locale={locale} langHeader={getLangContent()} />
               {children}
+              <FooterPage
+                locale={locale}
+                langHeader={getLangContent()}
+                langFooter={getLangFooters()}
+              />
             </ThemeRootProvider>
           </NextIntlClientProvider>
         </ReduxProvider>

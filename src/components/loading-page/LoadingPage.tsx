@@ -8,7 +8,7 @@ function Loading() {
     <Backdrop
       sx={{
         color: 'white',
-        backgroundColor: 'rgba(0,0,0,0.4)',
+        backgroundColor: 'rgba(0,0,0,0.6)',
         zIndex: 99,
         flexDirection: 'column',
       }}
