@@ -221,27 +221,51 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
                     role="presentation"
                     onClick={handlerToggleMenu(false)}
                     onKeyDown={handlerToggleMenu(false)}>
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        marginTop: 2,
+                        marginBottom: 1,
+                        marginRight: 2,
+                      }}>
+                      <Box sx={{ width: '48px', height: '36px', position: 'relative' }}>
+                        {companyLogo()}
+                      </Box>
+                      <Typography
+                        variant="h5"
+                        noWrap
+                        component="a"
+                        href={`/${locale ?? locale}`}
+                        sx={{
+                          fontWeight: 900,
+                          color: 'inherit',
+                          textDecoration: 'none',
+                          fontFamily: 'Macondo',
+                        }}>
+                        FİRMA ADI
+                      </Typography>
+                    </Box>
                     <List>
                       {pages.map((page, index) => (
-                        <ListItem key={index} disablePadding>
+                        <ListItem
+                          key={index}
+                          disablePadding
+                          sx={{
+                            width: '100%',
+                            backgroundColor: '#BF3131',
+                            color: 'white',
+                            marginBottom: 1,
+                            paddingLeft: 2,
+                          }}>
                           <ListItemButton>
-                            <ListItemIcon>
-                              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={page.label} />
-                          </ListItemButton>
-                        </ListItem>
-                      ))}
-                    </List>
-                    <Divider />
-                    <List>
-                      {pages.map((page, index) => (
-                        <ListItem key={index} disablePadding>
-                          <ListItemButton>
-                            <ListItemIcon>
-                              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={page.label} />
+                            <Typography variant="h6" component="span">
+                              <Link href={`/${locale}/${page.path}`} style={{ color: 'inherit' }}>
+                                {page.label}
+                              </Link>
+                            </Typography>
                           </ListItemButton>
                         </ListItem>
                       ))}
