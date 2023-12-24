@@ -50,13 +50,14 @@ const ProductList = ({ data, locale }: IRootParams) => {
             onLoad={() => load && handlerIsLoading()}
             alt={product[locale === 'en' ? 'titleEng' : 'title']}
             fill
+            priority
             sizes="100%"
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
         </CardMedia>
         <CardContent>
           <Typography variant="body2">
-            {product[locale === 'en' ? 'descEng' : 'desc']}...
+            {product[locale === 'en' ? 'descEng' : 'desc'].slice(0, 200)}...
           </Typography>
         </CardContent>
         {/* <CardActions>
