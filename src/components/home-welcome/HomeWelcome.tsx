@@ -9,7 +9,7 @@ import Button from '@mui/material/Button';
 import MouseIcon from '@mui/icons-material/Mouse';
 import { useTranslations } from 'next-intl';
 
-function HomeWelcome({ theme }: IRootParams) {
+async function HomeWelcome({ theme }: IRootParams) {
   const t = useTranslations('Body.Home');
 
   return (
@@ -39,7 +39,8 @@ function HomeWelcome({ theme }: IRootParams) {
           style={{ objectFit: 'cover', objectPosition: 'top' }}
           autoPlay
           muted
-          loop>
+          loop
+          poster="/images/home/onload.png">
           <source src="/images/home/welcome-video.mp4" type="video/mp4" />
         </video>
       </Box>

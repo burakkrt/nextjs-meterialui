@@ -7,6 +7,9 @@ import {
   langMetaConvert,
   langCanonicalUrls,
 } from '@/components/get-lang-contents/lang-meta-convert';
+import getLangContent from '@/components/get-lang-contents/getLangHeaders';
+import getLangFooters from '@components/get-lang-contents/getLangFooters';
+import FooterPage from '@/components/footer/page';
 
 // Static meta tags rendering
 export async function generateMetadata({ params: { locale } }: IParams) {
@@ -57,5 +60,10 @@ export async function generateMetadata({ params: { locale } }: IParams) {
 export default function Index({ params: { locale } }: IParams) {
   unstable_setRequestLocale(locale);
 
-  return <HomeContainer />;
+  return (
+    <>
+      <HomeContainer />
+      <FooterPage locale={locale} langHeader={getLangContent()} langFooter={getLangFooters()} />
+    </>
+  );
 }
