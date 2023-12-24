@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { IRootParams } from './types';
 import { useTranslations } from 'next-intl';
-import { categoryPriority } from '@data/products/products';
+import productsData, { categoryPriority } from '@data/products/products';
 import { IProductDatas } from '@data/products/types';
 import ProductsData from '@data/products/products';
 import ProductList from '@/components/product-list';
@@ -53,11 +53,32 @@ const ProductsContainer = ({ locale }: IRootParams) => {
     if (activeCategory === 'all' && searchProduct === null) {
       setData(ProductsData);
     } else if (activeCategory !== 'all') {
-      setData(ProductsData.filter((product) => product.category === activeCategory));
+      setData(
+        ProductsData.filter(
+          (product) => product[locale === 'en' ? 'categoryEng' : 'category'] === activeCategory
+        )
+      );
     } else if (searchProduct !== null) {
-      setData(ProductsData.filter((product) => product.title === searchProduct?.title));
+      setData(
+        ProductsData.filter(
+          (product) => product[locale === 'en' ? 'titleEng' : 'title'] === searchProduct?.title
+        )
+      );
     }
   }, [searchProduct, activeCategory]);
+
+  const returnLangCategory = () => {
+    const convertCategory = productsData
+      .map((product) => product[locale === 'en' ? 'categoryEng' : 'category'])
+      .reduce((acc: Array<string>, category: string) => {
+        if (acc.indexOf(category) === -1) {
+          acc.push(category);
+        }
+        return acc;
+      }, []);
+
+    return convertCategory;
+  };
 
   return (
     <>
@@ -162,8 +183,8 @@ const ProductsContainer = ({ locale }: IRootParams) => {
                   <Autocomplete
                     id="products-search"
                     options={ProductsData}
-                    groupBy={(option) => option.category}
-                    getOptionLabel={(option) => option.title}
+                    groupBy={(option) => option[locale === 'en' ? 'categoryEng' : 'category']}
+                    getOptionLabel={(option) => option[locale === 'en' ? 'titleEng' : 'title']}
                     renderInput={(params) => (
                       <TextField {...params} label={t('searchPlaceholder')} />
                     )}
@@ -193,7 +214,7 @@ const ProductsContainer = ({ locale }: IRootParams) => {
                     variant="text"
                     color="inherit"
                     sx={{ width: '100%', border: '1px solid rgba(0,0,0,0.2)' }}>
-                    {Object.keys(categoryPriority).map((category, index) => (
+                    {returnLangCategory().map((category, index) => (
                       <Button
                         key={index}
                         onClick={() => handleCategory(category)}

@@ -8,4 +8,7 @@ export interface IProductDatas {
   path: string;
   imageUrl: string;
   desc: string;
+  titleEng: string;
+  categoryEng: string;
+  descEng: string
 }

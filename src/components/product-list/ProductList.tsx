@@ -27,17 +27,17 @@ const ProductList = ({ data, locale }: IRootParams) => {
     return (
       <Card sx={{ minWidth: 300, minHeight: '100%' }}>
         <CardHeader
-          title={product.title}
+          title={product[locale === 'en' ? 'titleEng' : 'title']}
           titleTypographyProps={{
             variant: 'body1',
             fontWeight: 600,
             lineHeight: 1.2,
             minHeight: '39px',
           }}
-          subheader={product.category}
+          subheader={product[locale === 'en' ? 'categoryEng' : 'category']}
         />
         <CardMedia
-          title={product.title}
+          title={product[locale === 'en' ? 'titleEng' : 'title']}
           sx={{
             minHeight: 200,
             position: 'relative',
@@ -48,14 +48,16 @@ const ProductList = ({ data, locale }: IRootParams) => {
           <Image
             src={product.imageUrl}
             onLoad={() => load && handlerIsLoading()}
-            alt={product.title}
+            alt={product[locale === 'en' ? 'titleEng' : 'title']}
             fill
             sizes="100%"
             style={{ objectFit: 'cover', objectPosition: 'center' }}
           />
         </CardMedia>
         <CardContent>
-          <Typography variant="body2">{product.desc}...</Typography>
+          <Typography variant="body2">
+            {product[locale === 'en' ? 'descEng' : 'desc']}...
+          </Typography>
         </CardContent>
         {/* <CardActions>
           <Link href="/">
