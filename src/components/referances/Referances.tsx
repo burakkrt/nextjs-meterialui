@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 import { useTheme } from '@mui/material/styles';
+import gepKagitLogo from '@/../public/images/referances/gepkagit-logo.png';
+import okulLogo from '@/../public/images/referances/doga-koleji.png';
 
 const Referances = () => {
   const theme = useTheme();
@@ -33,9 +35,10 @@ const Referances = () => {
               },
             }}>
             <Image
-              src="/images/referances/gepkagit-logo.png"
-              alt="Gep Kağıt Logo"
+              src={gepKagitLogo}
+              alt="Referance Logo"
               fill
+              placeholder="blur"
               sizes="100%"
               style={{
                 objectFit: 'contain',
@@ -60,9 +63,10 @@ const Referances = () => {
               },
             }}>
             <Image
-              src="/images/referances/DOĞA-KOLEJİ.png"
-              alt="Gep Kağıt Logo"
+              src={okulLogo}
+              alt="Referance Logo"
               fill
+              placeholder="blur"
               sizes="100%"
               style={{
                 objectFit: 'contain',
