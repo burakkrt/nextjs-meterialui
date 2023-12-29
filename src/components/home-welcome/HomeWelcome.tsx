@@ -9,8 +9,9 @@ import Button from '@mui/material/Button';
 import MouseIcon from '@mui/icons-material/Mouse';
 import { useTranslations } from 'next-intl';
 import welcomeImage from '@/../public/images/home/fire-extinguisher.png';
+import Link from 'next/link';
 
-function HomeWelcome({ theme }: IRootParams) {
+function HomeWelcome({ theme, locale }: IRootParams) {
   const t = useTranslations('Body.Home');
 
   return (
@@ -202,7 +203,9 @@ function HomeWelcome({ theme }: IRootParams) {
                   size="large"
                   sx={{ marginTop: 2, [theme.breakpoints.down('sm')]: { display: 'none' } }}
                   endIcon={<MouseIcon />}>
-                  {t('welcomeButton')}
+                  <Link href={`${locale}/products`} style={{ color: 'inherit' }}>
+                    {t('welcomeButton')}
+                  </Link>
                 </Button>
               </Box>
             </Grid>

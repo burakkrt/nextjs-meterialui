@@ -110,14 +110,14 @@
     },
     "AboutUs": {
       "title": "Hakkımızda",
-      "title2": "[Firma Adı] Yangın Söndürme Sistemleri",
-      "title2desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit vitae vel ut, velit ratione aliquam sed voluptatibus neque ipsum debitis ea, tempora voluptates rem labore molestiae dolore, amet nostrum ullam!",
+      "title2": "Güzey Yangın Söndürme Sistemleri",
+      "title2desc": "Yüzey Yangın, yüksek kaliteli yangın söndürme ürünleriyle güvenliği ön planda tutar. İnovatif çözümlerimizle, her an ve her yerde güvende olmanızı sağlarız",
       "AboutUsTitle": "Hakkımızda",
-      "AboutUsDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut, temporibus praesentium soluta quod totam repudiandae minus aliquam maxime minima quos architecto optio rem exercitationem eius laudantium eaque et fugit. Enim quaerat facilis sint adipisci libero! Laudantium beatae suscipit atque est adipisci quasi molestiae architecto, illum voluptatibus iusto ratione omnis libero ab explicabo excepturi laboriosam eius inventore accusantium officia optio?",
+      "AboutUsDesc": "Güzey Yangın, yangın güvenliği konusunda uzmanlaşmış ve müşterilerine güvenilir çözümler sunan bir yangın söndürme ürünleri firmasıdır. İnsanların ve işletmelerin güvenliğini ön planda tutarak, en son teknolojiye dayalı yangın söndürme ürünleri sunan Güzey Yangın, sektördeki liderliğini sağlam bir şekilde sürdürmektedir.Güzey Yangın olarak, müşterilerimizin ihtiyaçlarına yönelik geniş bir ürün yelpazesi sunuyoruz. Yangın tüplerinden yangın söndürme sistemlerine kadar çeşitli ürünlerimiz, yüksek kalite standartlarına ve uluslararası güvenlik normlarına uygun olarak üretilmektedir.",
       "VisionMissionTitle": "Vizyon & Misyon",
-      "VisionMissionDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut, temporibus praesentium soluta quod totam repudiandae minus aliquam maxime minima quos architecto optio rem exercitationem eius laudantium eaque et fugit. Enim quaerat facilis sint adipisci libero! Laudantium beatae suscipit atque est adipisci quasi molestiae architecto, illum voluptatibus iusto ratione omnis libero ab explicabo excepturi laboriosam eius inventore accusantium officia optio?",
+      "VisionMissionDesc": "Güzey Yangın olarak, gelecekte daha güvenli bir dünya için lider bir yangın güvenliği çözümleri sağlayıcısı olmayı vizyon ediniyoruz. Müşterilerimizin, çalışanlarımızın ve toplumun genel güvenliğine katkıda bulunarak, yangın risklerini en aza indiren inovatif çözümlerle tanınan bir marka olmayı hedefliyoruz. Misyonumuz, müşterilerimize yüksek kaliteli yangın söndürme ürünleri sunarak, onların güvenliğini en üst düzeyde tutmak ve aynı zamanda çevresel sürdürülebilirliğe katkıda bulunmaktır. Ar-Ge'ye sürekli yatırım yaparak sektördeki en son teknolojik gelişmeleri takip ediyor ve müşteri memnuniyetini ön planda tutarak uzun vadeli güvenilir ilişkiler kurmayı amaçlıyoruz. ",
       "OurWorkTitle": "Çalışmalarımız",
-      "OurWorkDesc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae aut, temporibus praesentium soluta quod totam repudiandae minus aliquam maxime minima quos architecto optio rem exercitationem eius laudantium eaque et fugit. Enim quaerat facilis sint adipisci libero! Laudantium beatae suscipit atque est adipisci quasi molestiae architecto, illum voluptatibus iusto ratione omnis libero ab explicabo excepturi laboriosam eius inventore accusantium officia optio?",
+      "OurWorkDesc": "Ürün portföyümüz, geniş bir kullanıcı kitlesinin ihtiyaçlarını karşılamak üzere tasarlanmıştır. Çalışmalarımız, sadece ürünlerimizi sağlamakla kalmaz, aynı zamanda müşterilerimizi doğru kullanım, bakım ve acil durum planlaması konularında bilgilendirme ve eğitme amacını taşır. İnovasyonu teşvik eden bir kültürle, gelecekteki yangın güvenliği zorluklarına önceden çözümler sunmak için sürekli olarak çaba harcıyoruz.",
       "breadcrumbsHome": "Anasayfa"
     },
     "Products": {
@@ -128,9 +128,9 @@
       "goContactButton": "Hemen Sipariş Verin"
     },
     "Home": {
-      "welcomeTitle": "Lorem ipsum dolor sit amet consectetur adipisicing.",
-      "welcomeDesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae illum eum, voluptatibus ipsa ratione consectetur perspiciatis maxime illo! Nam beatae quidem maiores sapiente mollitia voluptates cum fugiat eaque corrupti aliquid? Repellendus laudantium consequatur dignissimos consequuntur ut aspernatur! Natus!",
-      "welcomeButton": "Hizmetleri İncele",
+      "welcomeTitle": "Güvenliği İlk Sıraya Koymak İçin, Güzey Yangın İle Tanışın!",
+      "welcomeDesc": "Güzey Yangın olarak, yangın güvenliği konusunda sürekli çaba sarf ediyor ve müşterilerimize en güvenilir çözümleri sunma konusundaki kararlılığımızı sürdürüyoruz. Çalışmalarımız, müşteri memnuniyetini ön planda tutarak, endüstri standartlarına uygun, yüksek kaliteli yangın söndürme ürünleri sunmayı içerir.",
+      "welcomeButton": "Ürünleri İncele",
       "Referances": {
         "title": "Referanslar",
         "desc": "Birçok firma ile başarılı iş ortaklıkları gerçekleştirdik ve altyapılarını oluşturduk."

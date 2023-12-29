@@ -13,7 +13,7 @@ function HomeContainer({ locale }: IRootParams) {
 
   return (
     <>
-      <HomeWelcome theme={theme} />
+      <HomeWelcome theme={theme} locale={locale} />
       <Referances />
       <WhyUs locale={locale} />
       <Services locale={locale} />

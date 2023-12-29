@@ -24,8 +24,6 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-console.log(favicon48);
-
 export default function LocaleLayout({ children, params: { locale } }: IRootParams) {
   unstable_setRequestLocale(locale);
   const messages = useMessages();
