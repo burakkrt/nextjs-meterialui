@@ -6,6 +6,7 @@ import HomeWelcome from '@/components/home-welcome';
 import { useTheme } from '@mui/material/styles';
 import Referances from '@components/referances';
 import WhyUs from '@/components/why-u-s';
+import Services from '@/components/services';
 
 function HomeContainer({ locale }: IRootParams) {
   const theme = useTheme();
@@ -15,6 +16,7 @@ function HomeContainer({ locale }: IRootParams) {
       <HomeWelcome theme={theme} />
       <Referances />
       <WhyUs locale={locale} />
+      <Services locale={locale} />
     </>
   );
 }

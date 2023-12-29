@@ -137,7 +137,25 @@
       },
       "WhyUs": {
         "title": "Neden bizi tercih etmelisiniz, size ne sunuyoruz ?",
-        "desc": "Yangın söndürme sistemleri konusundaki uzmanlığımız ve kaliteli ürün portföyümüzle, güvenilir ve etkili çözümler sunuyoruz. Müşteri memnuniyetini önceliğimiz olarak benimseyerek, tecrübeli ekibimizle hızlı ve profesyonel hizmet sağlıyoruz. Yangın güvenliği konusunda lider çözüm ortağınız olarak, güvenilirliğimiz ve kalitemizle öne çıkıyoruz."
+        "desc": "Yangın söndürme sistemleri konusundaki uzmanlığımız ve kaliteli ürün portföyümüzle, güvenilir ve etkili çözümler sunuyoruz. Müşteri memnuniyetini önceliğimiz olarak benimseyerek, tecrübeli ekibimizle hızlı ve profesyonel hizmet sağlıyoruz. Yangın güvenliği konusunda lider çözüm ortağınız olarak, güvenilirliğimiz ve kalitemizle öne çıkıyoruz.",
+        "button": "Daha Fazla"
+      },
+      "Services": {
+        "title": "Temel Hizmetlerimiz",
+        "desc": "Yangın söndürme sistemlerinde öncü firmamız, profesyonel projelendirme hizmetiyle bina özelliklerini göz önüne alarak özelleştirilmiş çözümler sunar. Geniş ürün yelpazesi ile yangın söndürme ekipmanlarını seçer ve mevcut sistemlere sorunsuz entegrasyon sağlar.",
+        "buttons": "Ürünleri İncele",
+        "serviceFirst": {
+          "title": "Projelendirme Hizmeti",
+          "desc": "Profesyonel ekibimiz, binanızın özellikleri ve risk analizi temelinde özelleştirilmiş yangın söndürme projeleri tasarlayarak güvenliğinizi en üst seviyeye çıkarmak için çözüm odaklı yaklaşımlar sunar."
+        },
+        "serviceSecond": {
+          "title": "Ürün Seçimi",
+          "desc": "Geniş ürün yelpazemizle, her türlü ortama uygun yangın söndürme ekipmanlarını seçer ve mevcut sistemlere sorunsuz entegrasyon sağlayarak eksiksiz bir güvenlik çözümü sunarız."
+        },
+        "serviceThird": {
+          "title": "Eğitim ve Danışmanlık",
+          "desc": "Müşterilerimize yönelik düzenlediğimiz eğitimlerle, yangın güvenliği bilincini artırır ve düzenli danışmanlık hizmetleriyle sistemlerin etkin kullanımını ve bakımını garanti altına alırız."
+        }
       }
     }
   }
