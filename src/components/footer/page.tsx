@@ -221,7 +221,7 @@ const FooterPage = ({ locale, langHeader: pages, langFooter }: IRootParams) => {
               }}>
               <LocationOnIcon sx={{ [theme.breakpoints.up('sm')]: { fontSize: 35 } }} />
               <Typography color="inherit" variant="h6" component="span">
-                Merkez Caddesi Merkez Mahallesi No: 0 Fatih / İstanbul
+                Yakında yeni yerimizde sizi ağırlamaktan mutluluk duyacağız.
               </Typography>
             </Box>
           </Grid>
@@ -246,7 +246,7 @@ const FooterPage = ({ locale, langHeader: pages, langFooter }: IRootParams) => {
                     textAlign: 'center',
                   },
                 }}>
-                {new Date().getFullYear()} © Firma Adı A.Ş. | {copyright}
+                {new Date().getFullYear()} © Güzey Yangın | {copyright}
               </Typography>
               {<SelectLanguage locale={locale} pathname={pathname} />}
               <Stack direction="row" spacing={{ xs: 2, sm: 4 }}>

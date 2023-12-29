@@ -148,7 +148,7 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
                   textDecoration: 'none',
                   fontFamily: 'Macondo',
                 }}>
-                FİRMA ADI
+                GÜZEY YANGIN
               </Typography>
             </Box>
             <Box

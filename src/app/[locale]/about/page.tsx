@@ -6,6 +6,8 @@ import {
   langMetaConvert,
   langCanonicalUrls,
 } from '@/components/get-lang-contents/lang-meta-convert';
+import meta800600 from '@/../public/images/meta/800-600-meta.png';
+import meta18001600 from '@/../public/images/meta/1800-1600-meta.png';
 
 // Static meta tags rendering
 export async function generateMetadata({ params: { locale } }: IParams) {
@@ -38,12 +40,12 @@ export async function generateMetadata({ params: { locale } }: IParams) {
       siteName: multiMetadata('Base.openGraph.siteName'),
       images: [
         {
-          url: '...',
+          url: `${meta800600.src}`,
           width: 800,
           height: 600,
         },
         {
-          url: '...',
+          url: `${meta18001600.src}`,
           width: 1800,
           height: 1600,
           alt: multiMetadata('AboutUs.openGraph.imagesAlt'),
