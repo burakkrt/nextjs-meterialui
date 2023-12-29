@@ -102,17 +102,6 @@ const productsData: Array<IProductDatas> = [
       'Foam monitors are special devices used in fire suppression systems and are generally designed to spray a high-pressure mixture of water and foam into a targeted area. These devices are often used to control fires in large areas such as industrial facilities, warehouse areas or airstrips.',
   },
   {
-    title: 'Köpük Konsantresi',
-    category: 'Köpüklü Söndürme Sistemleri',
-    path: '',
-    imageUrl: '/images/products/kopuk-konsantre.jpg',
-    desc: 'Köpük konsantresi, yangın söndürme sistemlerinde kullanılan özel bir kimyasal karışımdır ve genellikle su ile karıştırılarak köpük oluşturur. Bu konsantreler, yangın söndürme köpüğünün özelliklerini artırmak, yangını kontrol altına almak ve boğmak için tasarlanmıştır. ',
-    titleEng: 'Foam Concentrate',
-    categoryEng: 'Foam Extinguishing Systems',
-    descEng:
-      'Foam concentrate is a special chemical mixture used in fire extinguishing systems and usually creates foam by mixing with water. These concentrates are designed to increase the properties of firefighting foam, controlling and suffocating the fire.',
-  },
-  {
     title: 'FM200 - HFC-227ea Söndürme Sistemi',
     category: 'Temiz Gazlı Söndürme Sistemleri',
     path: '',
@@ -322,21 +311,78 @@ const productsData: Array<IProductDatas> = [
     descEng:
       'Portable fire extinguisher cabinet is a special storage unit designed to store fire extinguishing equipment in a portable and orderly manner. It usually includes fire extinguishers as well as firefighting blankets and other related supplies.',
   },
+  {
+    title: 'Zemin Aydınlatmaları',
+    category: 'Aciz Çıkış Levhaları ve Aydınlatmalar',
+    path: '',
+    imageUrl: '/images/products/acil-yonlendirme-levhalari.jpg',
+    desc: 'Bu zemin aydınlatmaları genellikle gece veya düşük ışık koşullarında etkili bir şekilde görünürlük sağlamak üzere tasarlanmış olup, aciz çıkışları belirgin bir şekilde aydınlatarak acil durumlarda insanların güvenli bir şekilde tahliye olmalarını kolaylaştırır.',
+    titleEng: 'Floor Lightings',
+    categoryEng: 'Incapacitated Exit Signs and Lightings',
+    descEng:
+      'These ground lights are generally designed to provide effective visibility at night or in low light conditions, making it easier for people to evacuate safely in emergency situations by clearly illuminating incapacitated exits.',
+  },
+  {
+    title: 'Çıkış Levhaları',
+    category: 'Aciz Çıkış Levhaları ve Aydınlatmalar',
+    path: '',
+    imageUrl: '/images/products/acil-cikis-levhasi-sol-ok-fotolumenli-de-4af1-1000x750.jpg',
+    desc: 'Çıkış Levhaları, acil durumlarda güvenli çıkışları belirtmek amacıyla kullanılan önemli güvenlik donanımlarıdır. Bu levhalar genellikle yüksek görünürlükteki renkler ve açıkça anlaşılır okunabilir yazılar içerir, böylece insanların aciz çıkışları hızlı bir şekilde bulmalarına yardımcı olurlar. ',
+    titleEng: 'Exit Signs',
+    categoryEng: 'Incapacitated Exit Signs and Lightings',
+    descEng:
+      'Exit Signs are important safety equipment used to indicate safe exits in emergency situations. These signs often feature high-visibility colors and clearly readable text to help people quickly find helpless exits.',
+  },
+  {
+    title: 'Tozlu Portatif Yangın Söndürücüler',
+    category: 'Portatif Yangın Söndürücüler',
+    path: '',
+    imageUrl: '/images/products/6-kg-kkt.png',
+    desc: 'Genellikle ABC sınıfı yangınlara karşı etkili müdahale sağlamak amacıyla tasarlanmış taşınabilir söndürme cihazlarıdır. Bu söndürücüler, yangının yaygın olarak görüldüğü kağıt, odun, sıvılar ve elektrikli cihazlar gibi farklı malzemelerden kaynaklanan yangınlara karşı etkili bir çözüm sunarlar.',
+    titleEng: 'Powder Portable Fire Extinguishers',
+    categoryEng: 'Portable Fire Extinguishers',
+    descEng:
+      'Powder portable fire extinguishers are portable extinguishing devices designed to provide effective intervention against ABC class fires. These extinguishers offer an effective solution against fires caused by different materials such as paper, wood, liquids and electrical devices, where fire is common.',
+  },
+  {
+    title: 'Köpüklü Portatif Yangın Söndürücüler',
+    category: 'Portatif Yangın Söndürücüler',
+    path: '',
+    imageUrl: '/images/products/Bos-Yangin-Sondurme-Tupu-Doldurulabilir-mi.jpg',
+    desc: 'Genellikle sıvı yangınlarına karşı etkili müdahale sağlamak amacıyla tasarlanmış taşınabilir söndürme cihazlarıdır. Bu söndürücüler, özellikle petrol ürünleri, benzin ve yağ gibi sıvı yangınlarına karşı güvenilir bir söndürme ajanı olan köpük kullanırlar. ',
+    titleEng: 'Foam Portable Fire Extinguishers',
+    categoryEng: 'Portable Fire Extinguishers',
+    descEng:
+      'They are generally portable extinguishing devices designed to provide effective intervention against liquid fires. These extinguishers use foam, which is a reliable extinguishing agent especially against liquid fires such as petroleum products, gasoline and oil.',
+  },
+  {
+    title: 'Gazlı Portatif Yangın Söndürücüler',
+    category: 'Portatif Yangın Söndürücüler',
+    path: '',
+    imageUrl: '/images/products/halokarbonlu-yangin-sondurme-cihazlari-jpg.jpg',
+    desc: 'Genellikle gaz alevi yangınlarına karşı etkili müdahale sağlamak amacıyla tasarlanmış taşınabilir söndürme cihazlarıdır. Bu söndürücüler, yangını boğma prensibiyle çalışarak oksijenin yanma sürecini keser ve alevi söndürür.',
+    titleEng: 'Gas Portable Fire Extinguishers',
+    categoryEng: 'Portable Fire Extinguishers',
+    descEng:
+      'They are generally portable extinguishing devices designed to provide effective intervention against gas flame fires. These extinguishers work on the principle of suffocating the fire, interrupting the combustion process of oxygen and extinguishing the flame.',
+  },
 ];
 
 export const categoryPriority: ICategoryPriority = {
   'Yangın Dolapları ve Ekipmanları': 1,
   'Davlumbaz Söndürme Sistemleri': 2,
   'Pano İçi Söndürme Sistemleri': 3,
-  'Sulu Söndürme Sistemleri': 4,
-  'Köpüklü Söndürme Sistemleri': 5,
-  'Temiz Gazlı Söndürme Sistemleri': 6,
-  'CO2 Söndürme Sistemleri': 7,
-  'Yangın ve Gaz Algılama Sistemleri': 8,
-  'Duman Tahliye Kapakları': 9,
-  'İSG Ekipmanları': 10,
-  'Duman ve Yangın Perdeleri': 11,
-  'Patlama Güvenlik ve Kıvılcım Algılama': 12,
+  'Portatif Yangın Söndürücüler': 4,
+  'Aciz Çıkış Levhaları ve Aydınlatmalar': 5,
+  'Sulu Söndürme Sistemleri': 6,
+  'Köpüklü Söndürme Sistemleri': 7,
+  'Temiz Gazlı Söndürme Sistemleri': 8,
+  'CO2 Söndürme Sistemleri': 9,
+  'Yangın ve Gaz Algılama Sistemleri': 10,
+  'Duman Tahliye Kapakları': 11,
+  'İSG Ekipmanları': 12,
+  'Duman ve Yangın Perdeleri': 13,
+  'Patlama Güvenlik ve Kıvılcım Algılama': 14,
 };
 
 productsData.sort((a, b) => {
