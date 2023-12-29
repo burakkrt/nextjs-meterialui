@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "Base": {
-      "applicationName": "...",
+      "applicationName": "Güzey Yangın",
       "referrer": "origin-when-cross-origin",
       "formatDetection": {
         "email": "false",
@@ -10,66 +10,66 @@
       },
       "openGraph": {
         "locale": "en_US",
-        "siteName": "..."
+        "siteName": "Güzey Yangın"
       }
     },
     "Home": {
-      "title": "Firma Adı",
-      "description": "This is an English page.",
-      "keywords": "keywords1, keywords2",
+      "title": "Güzey Yangın",
+      "description": "Secure your safety with Güzey Yangın! Our expert team takes safety one step further for all kinds of environments with customized fire extinguishing solutions and quality equipment. Using the latest technology, Güzey Yangın is with you to keep you safe at all times and in all situations.",
+      "keywords": "fire suppression systems, fire safety, fire prevention, fire alarm systems, fire extinguishing equipment, fire safety solutions, emergency safety, fire risk analysis, safety equipment, fire safety companies",
       "metadataBase": {
-        "baseUrl": "http://localhost:3000"
+        "baseUrl": "http://guzeyyangin.com"
       },
       "openGraph": {
-        "title": "Home Page",
-        "description": "...",
-        "url": "...",
-        "siteName": "...",
+        "title": "Güzey Yangın",
+        "description": "Secure your safety with Güzey Yangın! Our expert team takes safety one step further for all kinds of environments with customized fire extinguishing solutions and quality equipment. Using the latest technology, Güzey Yangın is with you to keep you safe at all times and in all situations.",
+        "url": "en",
+        "siteName": "Home Page | Güzey Yangın",
         "imagesAlt": "Güzey Yangın is with you safely with its fire systems and consultancy services: Güzey Yangın, Strong Assurance!"
       }
     },
     "AboutUs": {
-      "title": "Firma Adı",
-      "description": "Bu türkçe bir sayfadır.",
-      "keywords": "kelime1, kelime2",
+      "title": "About Us | Güzey Yangın",
+      "description": "Secure your safety with Güzey Yangın! Our expert team takes safety one step further for all kinds of environments with customized fire extinguishing solutions and quality equipment. Using the latest technology, Güzey Yangın is with you to keep you safe at all times and in all situations.",
+      "keywords": "fire suppression systems, fire safety, fire prevention, fire alarm systems, fire extinguishing equipment, fire safety solutions, emergency safety, fire risk analysis, safety equipment, fire safety companies",
       "metadataBase": {
-        "baseUrl": "http://localhost:3000"
+        "baseUrl": "http://guzeyyangin.com"
       },
       "openGraph": {
-        "title": "Anasayfa",
-        "description": "...",
-        "url": "...",
-        "siteName": "...",
+        "title": "About Us | Güzey Yangın",
+        "description": "Secure your safety with Güzey Yangın! Our expert team takes safety one step further for all kinds of environments with customized fire extinguishing solutions and quality equipment. Using the latest technology, Güzey Yangın is with you to keep you safe at all times and in all situations.",
+        "url": "en/about",
+        "siteName": "About Us | Güzey Yangın",
         "imagesAlt": "Güzey Yangın is with you safely with its fire systems and consultancy services: Güzey Yangın, Strong Assurance!"
       }
     },
     "Contact": {
-      "title": "Firma Adı",
-      "description": "Bu türkçe bir sayfadır.",
-      "keywords": "kelime1, kelime2",
+      "title": "Contact | Güzey Yangın",
+      "description": "Secure your safety with Güzey Yangın! Our expert team takes safety one step further for all kinds of environments with customized fire extinguishing solutions and quality equipment. Using the latest technology, Güzey Yangın is with you to keep you safe at all times and in all situations.",
+      "keywords": "fire suppression systems, fire safety, fire prevention, fire alarm systems, fire extinguishing equipment, fire safety solutions, emergency safety, fire risk analysis, safety equipment, fire safety companies",
       "metadataBase": {
-        "baseUrl": "http://localhost:3000"
+        "baseUrl": "http://guzeyyangin.com"
       },
       "openGraph": {
-        "title": "Anasayfa",
-        "description": "...",
-        "url": "...",
-        "siteName": "...",
+        "title": "Contact | Güzey Yangın",
+        "description": "Secure your safety with Güzey Yangın! Our expert team takes safety one step further for all kinds of environments with customized fire extinguishing solutions and quality equipment. Using the latest technology, Güzey Yangın is with you to keep you safe at all times and in all situations.",
+        "url": "en/contact",
+        "siteName": "Contact | Güzey Yangın",
         "imagesAlt": "Güzey Yangın is with you safely with its fire systems and consultancy services: Güzey Yangın, Strong Assurance!"
       }
     },
     "Products": {
-      "title": "Firma Adı",
-      "description": "Bu türkçe bir sayfadır.",
-      "keywords": "kelime1, kelime2",
+      "title": "Products | Güzey Yangın",
+      "description": "Secure your safety with Güzey Yangın! Our expert team takes safety one step further for all kinds of environments with customized fire extinguishing solutions and quality equipment. Using the latest technology, Güzey Yangın is with you to keep you safe at all times and in all situations.",
+      "keywords": "fire suppression systems, fire safety, fire prevention, fire alarm systems, fire extinguishing equipment, fire safety solutions, emergency safety, fire risk analysis, safety equipment, fire safety companies",
       "metadataBase": {
-        "baseUrl": "http://localhost:3000"
+        "baseUrl": "http://guzeyyangin.com"
       },
       "openGraph": {
-        "title": "Anasayfa",
-        "description": "...",
-        "url": "...",
-        "siteName": "...",
+        "title": "Products | Güzey Yangın",
+        "description": "Secure your safety with Güzey Yangın! Our expert team takes safety one step further for all kinds of environments with customized fire extinguishing solutions and quality equipment. Using the latest technology, Güzey Yangın is with you to keep you safe at all times and in all situations.",
+        "url": "en/products",
+        "siteName": "Products | Güzey Yangın",
         "imagesAlt": "Güzey Yangın is with you safely with its fire systems and consultancy services: Güzey Yangın, Strong Assurance!"
       }
     }
