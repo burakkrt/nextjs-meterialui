@@ -59,7 +59,7 @@ export default function Index({ params: { locale } }: IParams) {
 
   return (
     <>
-      <HomeContainer />
+      <HomeContainer locale={locale} />
     </>
   );
 }
