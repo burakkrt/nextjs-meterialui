@@ -55,7 +55,7 @@ const WhyUs = ({ locale }: IRootParams) => {
               }}>
               <Typography
                 variant="h4"
-                component="h2"
+                component="h3"
                 sx={{
                   fontWeight: 600,
                   [theme.breakpoints.down('sm')]: {

@@ -110,7 +110,7 @@ const ProductsContainer = ({ locale }: IRootParams) => {
         }}>
         <Typography
           variant="h2"
-          component="span"
+          component="h1"
           sx={{
             color: '#FFF6F6',
             zIndex: '2',
@@ -205,7 +205,7 @@ const ProductsContainer = ({ locale }: IRootParams) => {
                 </Box>
 
                 <Box sx={{ marginTop: 1.5 }}>
-                  <Typography variant="body1" component="p" sx={{ lineHeight: 2.5 }}>
+                  <Typography variant="body1" component="h2" sx={{ lineHeight: 2.5 }}>
                     {t('categories')}
                   </Typography>
                   <ButtonGroup
@@ -228,7 +228,7 @@ const ProductsContainer = ({ locale }: IRootParams) => {
                         }}>
                         <Typography
                           variant="body1"
-                          component="span"
+                          component="h3"
                           sx={{ textAlign: 'start', marginLeft: 1 }}>
                           {category}
                         </Typography>

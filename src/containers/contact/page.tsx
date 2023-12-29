@@ -51,7 +51,7 @@ const ContactContainer = ({ locale }: IRootParams) => {
         }}>
         <Typography
           variant="h2"
-          component="span"
+          component="h1"
           sx={{
             color: 'white',
             zIndex: '2',
@@ -173,7 +173,7 @@ const ContactContainer = ({ locale }: IRootParams) => {
                     <LocalPhoneIcon sx={{ fontSize: 35 }} />
                     <Typography
                       variant="h6"
-                      component="span"
+                      component="h3"
                       sx={{ color: 'white', ':hover': { textDecoration: 'underline' } }}>
                       <Link
                         href="tel:+90 555 555 55 55"
@@ -199,7 +199,7 @@ const ContactContainer = ({ locale }: IRootParams) => {
                     <EmailIcon sx={{ fontSize: 35 }} />
                     <Typography
                       variant="h6"
-                      component="span"
+                      component="h3"
                       sx={{ color: 'white', ':hover': { textDecoration: 'underline' } }}>
                       <Link
                         href="mailto:info@firmadi.com.tr"
@@ -223,7 +223,7 @@ const ContactContainer = ({ locale }: IRootParams) => {
                       },
                     }}>
                     <LocationOnIcon sx={{ fontSize: 35 }} />
-                    <Typography variant="h6" component="span">
+                    <Typography variant="h6" component="h3">
                       Merkez Caddesi Merkez Mahallesi No: 0 Fatih / İstanbul
                     </Typography>
                   </Box>

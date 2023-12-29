@@ -33,7 +33,7 @@ const Referances = () => {
         <Typography variant="h4" component="h3" sx={{ marginBottom: 1, fontWeight: '800' }}>
           {t('title')}
         </Typography>
-        <Typography variant="body1" component="p" sx={{ color: '3D3B40' }}>
+        <Typography variant="body1" component="span" sx={{ color: '3D3B40' }}>
           {t('desc')}
         </Typography>
       </Grid>

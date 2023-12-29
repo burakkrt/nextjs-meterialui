@@ -50,7 +50,7 @@ function HomeWelcome({ theme }: IRootParams) {
         </video>
         <Typography
           variant="h6"
-          component="span"
+          component="h1"
           color="whitesmoke"
           sx={{
             color: 'white',
@@ -108,7 +108,7 @@ function HomeWelcome({ theme }: IRootParams) {
           }}>
           <Typography
             variant="h6"
-            component="span"
+            component="h2"
             color="whitesmoke"
             sx={{
               color: '#191919',
@@ -189,6 +189,7 @@ function HomeWelcome({ theme }: IRootParams) {
                 }}>
                 <Typography
                   variant="body1"
+                  component="p"
                   color="#191919"
                   sx={{
                     [theme.breakpoints.up('lg')]: { color: 'white' },

@@ -30,6 +30,7 @@ const ProductList = ({ data, locale }: IRootParams) => {
           title={product[locale === 'en' ? 'titleEng' : 'title']}
           titleTypographyProps={{
             variant: 'body1',
+            component: 'h4',
             fontWeight: 600,
             lineHeight: 1.2,
             minHeight: '39px',
