@@ -18,7 +18,6 @@ const Referances = () => {
       sx={{
         marginTop: 0,
         padding: '3rem 0',
-        background: 'linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(242, 241, 235,0.5) 100%)',
       }}>
       <Grid
         item
