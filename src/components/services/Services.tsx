@@ -63,6 +63,7 @@ const Services = ({ locale }: IRootParams) => {
               src={PlaningImage}
               alt="Planing"
               fill
+              sizes="100%"
               placeholder="blur"
               style={{
                 objectFit: 'cover',
@@ -128,6 +129,7 @@ const Services = ({ locale }: IRootParams) => {
               src={SelectProductImage}
               alt="Planing"
               fill
+              sizes="100%"
               placeholder="blur"
               style={{
                 objectFit: 'cover',
@@ -193,6 +195,7 @@ const Services = ({ locale }: IRootParams) => {
               src={EducationImage}
               alt="Planing"
               fill
+              sizes="100%"
               placeholder="blur"
               style={{
                 objectFit: 'cover',

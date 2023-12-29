@@ -17,7 +17,8 @@ const Referances = () => {
     <Box
       sx={{
         marginTop: 0,
-        padding: '3rem 0',
+        padding: '2rem 0',
+        backgroundColor: '#F2F1EB',
       }}>
       <Grid
         item
@@ -25,7 +26,7 @@ const Referances = () => {
         sx={{
           textAlign: 'center',
           color: '#3D3B40',
-          marginBottom: 8,
+          marginBottom: 4,
           [theme.breakpoints.down('sm')]: {
             marginBottom: 0,
           },

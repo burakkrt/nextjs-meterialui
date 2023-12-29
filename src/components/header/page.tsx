@@ -95,7 +95,9 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
                 }}>
                 <LocalPhoneIcon />
                 <Typography variant="subtitle2" component="span">
-                  +90 555 555 55 55
+                  <Link href="tel:+905415455770" target="_blank" style={{ color: 'inherit' }}>
+                    +90 541 545 57 70
+                  </Link>
                 </Typography>
               </Box>
               <Box
@@ -107,13 +109,13 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
                   gap: '0.5rem',
                 }}>
                 <EmailIcon />
-                <Typography
-                  component="a"
-                  href="/"
-                  color="white"
-                  sx={{ ':hover': { textDecoration: 'underline' } }}
-                  variant="subtitle2">
-                  info@firmadi.com.tr
+                <Typography variant="subtitle2" component="span">
+                  <Link
+                    href="mailto:info@guzeyyangin.com.tr"
+                    target="_blank"
+                    style={{ color: 'inherit' }}>
+                    info@guzeyyangin.com.tr
+                  </Link>
                 </Typography>
               </Box>
             </Box>

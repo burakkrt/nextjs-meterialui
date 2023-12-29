@@ -194,6 +194,7 @@ function HomeWelcome({ theme, locale }: IRootParams) {
                   color="#191919"
                   sx={{
                     [theme.breakpoints.up('lg')]: { color: 'white' },
+                    [theme.breakpoints.down('sm')]: { textAlign: 'center' },
                   }}>
                   {t('welcomeDesc')}
                 </Typography>

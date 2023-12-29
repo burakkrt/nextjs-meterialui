@@ -36,6 +36,7 @@ const WhyUs = ({ locale }: IRootParams) => {
               <Image
                 src={WhyUsHero}
                 fill
+                sizes="100%"
                 placeholder="blur"
                 alt="Why Us ?"
                 style={{ objectFit: 'cover', objectPosition: 'center' }}

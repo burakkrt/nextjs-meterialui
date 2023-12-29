@@ -175,11 +175,8 @@ const ContactContainer = ({ locale }: IRootParams) => {
                       variant="h6"
                       component="h3"
                       sx={{ color: 'white', ':hover': { textDecoration: 'underline' } }}>
-                      <Link
-                        href="tel:+90 555 555 55 55"
-                        target="_blank"
-                        style={{ color: 'inherit' }}>
-                        +90 555 555 55 55
+                      <Link href="tel:+905415455770" target="_blank" style={{ color: 'inherit' }}>
+                        +90 541 545 57 70
                       </Link>
                     </Typography>
                   </Box>
@@ -202,10 +199,10 @@ const ContactContainer = ({ locale }: IRootParams) => {
                       component="h3"
                       sx={{ color: 'white', ':hover': { textDecoration: 'underline' } }}>
                       <Link
-                        href="mailto:info@firmadi.com.tr"
+                        href="mailto:info@guzeyyangin.com.tr"
                         target="_blank"
                         style={{ color: 'inherit' }}>
-                        info@firmadi.com.tr
+                        info@guzeyyangin.com.tr
                       </Link>
                     </Typography>
                   </Box>
@@ -224,7 +221,7 @@ const ContactContainer = ({ locale }: IRootParams) => {
                     }}>
                     <LocationOnIcon sx={{ fontSize: 35 }} />
                     <Typography variant="h6" component="h3">
-                      Merkez Caddesi Merkez Mahallesi No: 0 Fatih / İstanbul
+                      Tuna Mahallesi 730 Sokak No 8 Kat 3 Esenler / İstanbul
                     </Typography>
                   </Box>
                 </Box>
@@ -288,7 +285,7 @@ const ContactContainer = ({ locale }: IRootParams) => {
                   },
                 }}>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192698.64616681487!2d28.847373737387183!3d41.00520413827649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1702993753819!5m2!1str!2str"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.0060530837272!2d28.86289007725288!3d41.046996717037985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabab420ad4b6f%3A0x344a0cd26d684f7b!2sTuna%2C%20730.%20Sk.%20No%3A8%20Kat%203%2C%2034225%20Esenler%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1703876313871!5m2!1str!2str"
                   width="100%"
                   height="100%"
                   loading="lazy"
