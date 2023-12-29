@@ -44,7 +44,14 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
 
   function companyLogo() {
     return (
-      <Image src="/images/Next.js-logo.png" alt="Company Logo" fill quality={100} sizes="56vw" />
+      <Image
+        src="/images/favicons/favicon-32x32.png"
+        alt="Company Logo"
+        fill
+        priority
+        quality={100}
+        sizes="100%"
+      />
     );
   }
 
@@ -134,7 +141,15 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
                 alignItems: 'center',
                 display: { xs: 'none', md: 'flex' },
               }}>
-              <Box sx={{ width: '68px', height: '48px', position: 'relative' }}>
+              <Box
+                sx={{
+                  width: '48px',
+                  height: '48px',
+                  position: 'relative',
+                  marginRight: 1,
+                  backgroundColor: '#161A30',
+                  borderRadius: '50%',
+                }}>
                 {companyLogo()}
               </Box>
               <Typography
@@ -147,6 +162,7 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
                   color: 'inherit',
                   textDecoration: 'none',
                   fontFamily: 'Macondo',
+                  lineHeight: 1.2,
                 }}>
                 GÜZEY YANGIN
               </Typography>
@@ -171,7 +187,7 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
                   justifyContent: 'center',
                   alignItems: 'center',
                 }}>
-                <Box sx={{ width: '56px', height: '42px', position: 'relative' }}>
+                <Box sx={{ width: '48px', height: '48px', position: 'relative' }}>
                   {companyLogo()}
                 </Box>
                 <Typography
@@ -180,12 +196,13 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
                   component="a"
                   href={`/${locale ?? locale}`}
                   sx={{
-                    fontFamily: 'monospace',
-                    fontWeight: 700,
+                    fontWeight: 900,
                     color: 'inherit',
                     textDecoration: 'none',
+                    fontFamily: 'Macondo',
+                    lineHeight: 1.2,
                   }}>
-                  FİRMA ADI
+                  GÜZEY YANGIN
                 </Typography>
               </Box>
 
@@ -217,11 +234,19 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
                         marginBottom: 1,
                         marginRight: 2,
                       }}>
-                      <Box sx={{ width: '48px', height: '36px', position: 'relative' }}>
+                      <Box
+                        sx={{
+                          width: '42px',
+                          height: '42px',
+                          position: 'relative',
+                          backgroundColor: '#161A30',
+                          marginRight: 1,
+                          borderRadius: '50%',
+                        }}>
                         {companyLogo()}
                       </Box>
                       <Typography
-                        variant="h5"
+                        variant="h6"
                         noWrap
                         component="a"
                         href={`/${locale ?? locale}`}
@@ -231,7 +256,7 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
                           textDecoration: 'none',
                           fontFamily: 'Macondo',
                         }}>
-                        FİRMA ADI
+                        GÜZEY YANGIN
                       </Typography>
                     </Box>
                     <List sx={{ height: '60%', overflow: 'auto', marginTop: 3 }}>
