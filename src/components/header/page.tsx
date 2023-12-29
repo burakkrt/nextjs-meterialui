@@ -14,13 +14,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
 import SelectLanguage from '@components/select-language';
@@ -32,17 +27,8 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
   const [mobileRightMenu, setMobileRightMenu] = React.useState<boolean>(false);
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
   const pathname = usePathname();
   const theme = useTheme();
-
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
 
   const handlerToggleMenu = (state: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
     if (
@@ -217,7 +203,7 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
 
                 <Drawer anchor="right" open={mobileRightMenu} onClose={handlerToggleMenu(false)}>
                   <Box
-                    sx={{ width: 250 }}
+                    sx={{ width: 250, backgroundColor: '#BF3131', height: '100%' }}
                     role="presentation"
                     onClick={handlerToggleMenu(false)}
                     onKeyDown={handlerToggleMenu(false)}>
@@ -241,27 +227,25 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
                         href={`/${locale ?? locale}`}
                         sx={{
                           fontWeight: 900,
-                          color: 'inherit',
+                          color: 'white',
                           textDecoration: 'none',
                           fontFamily: 'Macondo',
                         }}>
                         FİRMA ADI
                       </Typography>
                     </Box>
-                    <List>
+                    <List sx={{ height: '60%', overflow: 'auto', marginTop: 3 }}>
                       {pages.map((page, index) => (
                         <ListItem
                           key={index}
                           disablePadding
                           sx={{
                             width: '100%',
-                            backgroundColor: '#BF3131',
                             color: 'white',
                             marginBottom: 1,
-                            paddingLeft: 2,
                           }}>
-                          <ListItemButton>
-                            <Typography variant="h6" component="span">
+                          <ListItemButton sx={{ borderBottom: '1px solid rgba(255,255,255,0.2)' }}>
+                            <Typography variant="h6" component="span" sx={{ paddingLeft: 2 }}>
                               <Link href={`/${locale}/${page.path}`} style={{ color: 'inherit' }}>
                                 {page.label}
                               </Link>
