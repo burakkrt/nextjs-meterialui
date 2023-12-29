@@ -243,13 +243,14 @@ const FooterPage = ({ locale, langHeader: pages, langFooter }: IRootParams) => {
                 sx={{
                   [theme.breakpoints.down('lg')]: {
                     order: '2',
+                    textAlign: 'center',
                   },
                 }}>
                 {new Date().getFullYear()} © Firma Adı A.Ş. | {copyright}
               </Typography>
               {<SelectLanguage locale={locale} pathname={pathname} />}
               <Stack direction="row" spacing={{ xs: 2, sm: 4 }}>
-                {pages.slice(0, 4).map((page, index) => (
+                {pages.slice(0, 3).map((page, index) => (
                   <Typography
                     key={index}
                     variant="body1"

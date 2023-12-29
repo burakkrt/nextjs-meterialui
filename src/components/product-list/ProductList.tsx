@@ -25,7 +25,7 @@ const ProductList = ({ data, locale }: IRootParams) => {
 
   const ProductCard = ({ product, load = false }: IRenderProductCard) => {
     return (
-      <Card sx={{ minWidth: 300, minHeight: '100%' }}>
+      <Card sx={{ minHeight: '100%' }}>
         <CardHeader
           title={product[locale === 'en' ? 'titleEng' : 'title']}
           titleTypographyProps={{
