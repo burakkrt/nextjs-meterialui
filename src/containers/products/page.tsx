@@ -158,8 +158,8 @@ const ProductsContainer = ({ locale }: IRootParams) => {
               <Autocomplete
                 id="products-search"
                 options={ProductsData}
-                groupBy={(option) => option.category}
-                getOptionLabel={(option) => option.title}
+                groupBy={(option) => option[locale === 'en' ? 'categoryEng' : 'category']}
+                getOptionLabel={(option) => option[locale === 'en' ? 'titleEng' : 'title']}
                 renderInput={(params) => <TextField {...params} label={t('searchPlaceholder')} />}
                 onChange={(e, selectProduct) => handleSearchProduct(selectProduct)}
                 value={searchProduct}
