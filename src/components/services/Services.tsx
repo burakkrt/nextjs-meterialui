@@ -9,10 +9,14 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import PlaningImage from '@/../public/images/services/planing.jpg';
 import SelectProductImage from '@/../public/images/services/select-product.jpg';
 import EducationImage from '@/../public/images/services/education.jpg';
+import { usePathname } from 'next/navigation';
+import checkPathname from '@components/check-pathname';
 
 const Services = ({ locale }: IRootParams) => {
   const theme = useTheme();
   const t = useTranslations('Body.Home.Services');
+  const pathname = usePathname();
+
   return (
     <Container
       sx={{
@@ -94,7 +98,9 @@ const Services = ({ locale }: IRootParams) => {
                 variant="text"
                 endIcon={<ArrowForwardIosIcon />}
                 sx={{ color: '#D83F31', fontWeight: 600 }}>
-                <Link href="products" style={{ color: 'inherit' }}>
+                <Link
+                  href={!checkPathname(pathname) ? `${locale}/products` : 'products'}
+                  style={{ color: 'inherit' }}>
                   {t('buttons')}
                 </Link>
               </Button>
@@ -160,7 +166,9 @@ const Services = ({ locale }: IRootParams) => {
                 variant="text"
                 endIcon={<ArrowForwardIosIcon />}
                 sx={{ color: '#D83F31', fontWeight: 600 }}>
-                <Link href="products" style={{ color: 'inherit' }}>
+                <Link
+                  href={!checkPathname(pathname) ? `${locale}/products` : 'products'}
+                  style={{ color: 'inherit' }}>
                   {t('buttons')}
                 </Link>
               </Button>
@@ -226,7 +234,9 @@ const Services = ({ locale }: IRootParams) => {
                 variant="text"
                 endIcon={<ArrowForwardIosIcon />}
                 sx={{ color: '#D83F31', fontWeight: 600 }}>
-                <Link href="products" style={{ color: 'inherit' }}>
+                <Link
+                  href={!checkPathname(pathname) ? `${locale}/products` : 'products'}
+                  style={{ color: 'inherit' }}>
                   {t('buttons')}
                 </Link>
               </Button>

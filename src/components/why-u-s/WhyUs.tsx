@@ -8,10 +8,14 @@ import { useTranslations } from 'next-intl';
 import WhyUsHero from '@/../public/images/why-us/fire-fighters-1510065_1280.jpg';
 import { Container, Box, Typography, Grid, Button } from '@mui/material';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { usePathname } from 'next/navigation';
+import checkPathname from '@components/check-pathname';
 
 const WhyUs = ({ locale }: IRootParams) => {
   const theme = useTheme();
   const t = useTranslations('Body.Home.WhyUs');
+  const pathname = usePathname();
+
   return (
     <Box sx={{ backgroundColor: '#2C3333', color: 'white' }}>
       <Container>
@@ -76,7 +80,9 @@ const WhyUs = ({ locale }: IRootParams) => {
                   color: 'white',
                   ':hover': { backgroundColor: '#D83F31' },
                 }}>
-                <Link href="about" style={{ color: 'inherit' }}>
+                <Link
+                  href={!checkPathname(pathname) ? `${locale}/about` : 'about'}
+                  style={{ color: 'inherit' }}>
                   {t('button')}
                 </Link>
               </Button>

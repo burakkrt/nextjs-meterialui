@@ -207,7 +207,9 @@ function HomeWelcome({ theme, locale }: IRootParams) {
                   size="large"
                   sx={{ marginTop: 2, [theme.breakpoints.down('sm')]: { display: 'none' } }}
                   endIcon={<MouseIcon />}>
-                  <Link href="products" style={{ color: 'inherit' }}>
+                  <Link
+                    href={!checkPathname(pathname) ? `${locale}/products` : 'products'}
+                    style={{ color: 'inherit' }}>
                     {t('welcomeButton')}
                   </Link>
                 </Button>
