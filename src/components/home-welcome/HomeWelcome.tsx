@@ -53,7 +53,7 @@ function HomeWelcome({ theme, locale }: IRootParams) {
           <source src="/images/home/welcome-video.mp4" type="video/mp4" />
         </video>
         <Typography
-          variant="h6"
+          variant="body1"
           component="h1"
           color="whitesmoke"
           sx={{
@@ -68,12 +68,12 @@ function HomeWelcome({ theme, locale }: IRootParams) {
             backgroundColor: 'rgba(0,0,0,0.3)',
             [theme.breakpoints.down('lg')]: {
               display: 'block',
-              padding: '0.6rem 0',
+              padding: '0.6rem 0.4rem',
               lineHeight: 1.2,
             },
             [theme.breakpoints.between('sm', 'lg')]: {
               fontSize: 36,
-              padding: '1rem 0',
+              padding: '1rem 0.6rem',
             },
           }}>
           {t('welcomeTitle')}

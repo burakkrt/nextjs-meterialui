@@ -103,7 +103,15 @@ const AboutPage = ({ locale }: IRootParams) => {
               },
             }}>
             <Grid item xs={12} sm={8} sx={{ margin: '0 auto' }}>
-              <Typography variant="h4" component="h1" sx={{ fontWeight: '700' }}>
+              <Typography
+                variant="h4"
+                component="h1"
+                sx={{
+                  fontWeight: '700',
+                  [theme.breakpoints.down('sm')]: {
+                    fontSize: 28,
+                  },
+                }}>
                 {t('title2')}
               </Typography>
             </Grid>
@@ -129,6 +137,9 @@ const AboutPage = ({ locale }: IRootParams) => {
                   fontWeight: '700',
                   borderBottom: '2px solid #EEC759',
                   paddingBottom: 1,
+                  [theme.breakpoints.down('sm')]: {
+                    fontSize: 24,
+                  },
                 }}>
                 {t('AboutUsTitle')}
               </Typography>
@@ -152,7 +163,7 @@ const AboutPage = ({ locale }: IRootParams) => {
                   minWidth: 600,
                   minHeight: 400,
                   [theme.breakpoints.down('sm')]: {
-                    minWidth: 350,
+                    minWidth: 300,
                     minHeight: 250,
                     marginTop: 2,
                   },
@@ -185,6 +196,9 @@ const AboutPage = ({ locale }: IRootParams) => {
                 flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'center',
+                [theme.breakpoints.down('sm')]: {
+                  display: 'none',
+                },
               }}>
               <Box
                 sx={{
@@ -192,7 +206,7 @@ const AboutPage = ({ locale }: IRootParams) => {
                   minWidth: 600,
                   minHeight: 400,
                   [theme.breakpoints.down('sm')]: {
-                    minWidth: 350,
+                    minWidth: 300,
                     minHeight: 250,
                     marginBottom: 2,
                   },
@@ -215,12 +229,49 @@ const AboutPage = ({ locale }: IRootParams) => {
                   fontWeight: '700',
                   borderBottom: '2px solid #88AB8E',
                   paddingBottom: 1,
+                  [theme.breakpoints.down('sm')]: {
+                    fontSize: 24,
+                  },
                 }}>
                 {t('VisionMissionTitle')}
               </Typography>
               <Typography variant="body1" component="p" sx={{ marginTop: 2 }}>
                 {t('VisionMissionDesc')}
               </Typography>
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              lg={'auto'}
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center',
+                alignItems: 'center',
+                [theme.breakpoints.up('sm')]: {
+                  display: 'none',
+                },
+              }}>
+              <Box
+                sx={{
+                  position: 'relative',
+                  minWidth: 600,
+                  minHeight: 400,
+                  [theme.breakpoints.down('sm')]: {
+                    minWidth: 300,
+                    minHeight: 250,
+                    marginTop: 2,
+                  },
+                }}>
+                <Image
+                  src={hero2}
+                  alt="Vizyon & Misyon"
+                  fill
+                  placeholder="blur"
+                  sizes="100%"
+                  style={{ objectFit: 'cover', objectPosition: 'center', borderRadius: '8px' }}
+                />
+              </Box>
             </Grid>
           </Grid>
           <Grid
@@ -238,6 +289,9 @@ const AboutPage = ({ locale }: IRootParams) => {
                   fontWeight: '700',
                   borderBottom: '2px solid #FF8080',
                   paddingBottom: 1,
+                  [theme.breakpoints.down('sm')]: {
+                    fontSize: 24,
+                  },
                 }}>
                 {t('OurWorkTitle')}
               </Typography>
@@ -261,7 +315,7 @@ const AboutPage = ({ locale }: IRootParams) => {
                   minWidth: 600,
                   minHeight: 400,
                   [theme.breakpoints.down('sm')]: {
-                    minWidth: 350,
+                    minWidth: 300,
                     minHeight: 250,
                     marginTop: 2,
                   },

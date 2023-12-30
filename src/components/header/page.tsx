@@ -21,10 +21,6 @@ import EmailIcon from '@mui/icons-material/Email';
 import SelectLanguage from '@components/select-language';
 import { useTheme } from '@mui/material/styles';
 
-import * as Styled from './page.styled';
-
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
 const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
   const [mobileRightMenu, setMobileRightMenu] = React.useState<boolean>(false);
   const pathname = usePathname();
@@ -93,7 +89,13 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
                   alignItems: 'center',
                   gap: '0.5rem',
                 }}>
-                <LocalPhoneIcon />
+                <LocalPhoneIcon
+                  sx={{
+                    [theme.breakpoints.down('sm')]: {
+                      fontSize: 20,
+                    },
+                  }}
+                />
                 <Typography variant="subtitle2" component="span">
                   <Link href="tel:+905415455770" target="_blank" style={{ color: 'inherit' }}>
                     +90 541 545 57 70
@@ -108,7 +110,13 @@ const HeaderPage = ({ locale, langHeader: pages }: IRootParams) => {
                   alignItems: 'center',
                   gap: '0.5rem',
                 }}>
-                <EmailIcon />
+                <EmailIcon
+                  sx={{
+                    [theme.breakpoints.down('sm')]: {
+                      fontSize: 20,
+                    },
+                  }}
+                />
                 <Typography variant="subtitle2" component="span">
                   <Link
                     href="mailto:info@guzeyyangin.com.tr"

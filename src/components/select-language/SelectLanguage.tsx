@@ -95,8 +95,23 @@ function SelectLanguage({ locale, pathname, color: textColor }: IRootProps) {
 
   return (
     <>
-      <Button onClick={handleClickOpen} sx={{ color: 'white' }}>
-        <ListItemAvatar sx={{ minWidth: '0', marginRight: '0.5rem' }}>
+      <Button
+        onClick={handleClickOpen}
+        sx={{
+          color: 'white',
+          [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textAlign: 'center',
+          },
+        }}>
+        <ListItemAvatar
+          sx={{
+            minWidth: '0',
+            marginRight: '0.5rem',
+            [theme.breakpoints.down('sm')]: { marginRight: '0' },
+          }}>
           <Avatar sx={{ bgcolor: 'transparent', color: 'none' }}>
             <Image src={selectedValue.image} alt="Country Image" fill />
           </Avatar>

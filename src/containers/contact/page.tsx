@@ -130,7 +130,7 @@ const ContactContainer = ({ locale }: IRootParams) => {
                   position: 'relative',
                   overflow: 'hidden',
                   [theme.breakpoints.down('sm')]: {
-                    padding: '5rem 2rem',
+                    padding: '5rem 1.2rem',
                   },
                   [theme.breakpoints.up('sm')]: {
                     borderRadius: '8px 0 0 8px',
@@ -143,13 +143,21 @@ const ContactContainer = ({ locale }: IRootParams) => {
                     fontFamily: 'Roboto, sans-serif;',
                     textTransform: 'uppercase',
                     fontWeight: '700',
+                    [theme.breakpoints.down('sm')]: {
+                      fontSize: 22,
+                      textAlign: 'center',
+                    },
                   }}>
                   {t('mapTitle')}
                 </Typography>
                 <Typography
                   variant="body1"
                   component="p"
-                  sx={{ marginTop: 1, color: 'rgba(255,255,255,0.7)' }}>
+                  sx={{
+                    marginTop: 1,
+                    color: 'rgba(255,255,255,0.7)',
+                    [theme.breakpoints.down('sm')]: { textAlign: 'center' },
+                  }}>
                   {t('mapDesc')}
                 </Typography>
                 <Box
@@ -168,13 +176,27 @@ const ContactContainer = ({ locale }: IRootParams) => {
                       gap: 3,
                       [theme.breakpoints.down('sm')]: {
                         gap: 1,
+                        flexDirection: 'column',
                       },
                     }}>
-                    <LocalPhoneIcon sx={{ fontSize: 35 }} />
+                    <LocalPhoneIcon
+                      sx={{
+                        fontSize: 35,
+                        [theme.breakpoints.down('sm')]: {
+                          fontSize: 24,
+                        },
+                      }}
+                    />
                     <Typography
                       variant="h6"
                       component="h3"
-                      sx={{ color: 'white', ':hover': { textDecoration: 'underline' } }}>
+                      sx={{
+                        color: 'white',
+                        ':hover': { textDecoration: 'underline' },
+                        [theme.breakpoints.down('sm')]: {
+                          fontSize: 18,
+                        },
+                      }}>
                       <Link href="tel:+905415455770" target="_blank" style={{ color: 'inherit' }}>
                         +90 541 545 57 70
                       </Link>
@@ -191,13 +213,30 @@ const ContactContainer = ({ locale }: IRootParams) => {
                       [theme.breakpoints.down('sm')]: {
                         gap: 1,
                         marginTop: 3,
+                        flexDirection: 'column',
                       },
                     }}>
-                    <EmailIcon sx={{ fontSize: 35 }} />
+                    <EmailIcon
+                      sx={{
+                        fontSize: 35,
+                        [theme.breakpoints.down('sm')]: {
+                          fontSize: 22,
+                          textWrap: 'wrap',
+                        },
+                      }}
+                    />
                     <Typography
                       variant="h6"
                       component="h3"
-                      sx={{ color: 'white', ':hover': { textDecoration: 'underline' } }}>
+                      sx={{
+                        color: 'white',
+                        ':hover': {
+                          textDecoration: 'underline',
+                        },
+                        [theme.breakpoints.down('sm')]: {
+                          fontSize: 18,
+                        },
+                      }}>
                       <Link
                         href="mailto:info@guzeyyangin.com.tr"
                         target="_blank"
@@ -217,10 +256,25 @@ const ContactContainer = ({ locale }: IRootParams) => {
                       [theme.breakpoints.down('sm')]: {
                         gap: 1,
                         marginTop: 3,
+                        flexDirection: 'column',
                       },
                     }}>
-                    <LocationOnIcon sx={{ fontSize: 35 }} />
-                    <Typography variant="h6" component="h3">
+                    <LocationOnIcon
+                      sx={{
+                        fontSize: 35,
+                        [theme.breakpoints.down('sm')]: {
+                          fontSize: 24,
+                        },
+                      }}
+                    />
+                    <Typography
+                      variant="h6"
+                      component="h3"
+                      sx={{
+                        [theme.breakpoints.down('sm')]: {
+                          fontSize: 18,
+                        },
+                      }}>
                       Tuna Mahallesi 730 Sokak No 8 Kat 3 Esenler / İstanbul
                     </Typography>
                   </Box>
