@@ -173,6 +173,7 @@ function HomeWelcome({ theme, locale }: IRootParams) {
                   src={welcomeImage}
                   alt="Fire Extinguishers"
                   fill
+                  priority
                   placeholder="blur"
                   sizes="100%"
                   style={{ objectFit: 'contain' }}

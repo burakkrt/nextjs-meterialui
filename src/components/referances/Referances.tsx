@@ -60,7 +60,7 @@ const Referances = () => {
               src={gepKagitLogo}
               alt="Referance Logo"
               fill
-              placeholder="blur"
+              priority
               sizes="100%"
               style={{
                 objectFit: 'contain',
@@ -89,7 +89,7 @@ const Referances = () => {
               src={okulLogo}
               alt="Referance Logo"
               fill
-              placeholder="blur"
+              priority
               sizes="100%"
               style={{
                 objectFit: 'contain',
