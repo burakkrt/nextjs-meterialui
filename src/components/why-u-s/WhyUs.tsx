@@ -76,7 +76,7 @@ const WhyUs = ({ locale }: IRootParams) => {
                   color: 'white',
                   ':hover': { backgroundColor: '#D83F31' },
                 }}>
-                <Link href={`${locale}/about`} style={{ color: 'inherit' }}>
+                <Link href="about" style={{ color: 'inherit' }}>
                   {t('button')}
                 </Link>
               </Button>

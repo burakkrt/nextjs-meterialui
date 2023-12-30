@@ -94,7 +94,7 @@ const Services = ({ locale }: IRootParams) => {
                 variant="text"
                 endIcon={<ArrowForwardIosIcon />}
                 sx={{ color: '#D83F31', fontWeight: 600 }}>
-                <Link href={`${locale}/products`} style={{ color: 'inherit' }}>
+                <Link href="products" style={{ color: 'inherit' }}>
                   {t('buttons')}
                 </Link>
               </Button>
@@ -160,7 +160,7 @@ const Services = ({ locale }: IRootParams) => {
                 variant="text"
                 endIcon={<ArrowForwardIosIcon />}
                 sx={{ color: '#D83F31', fontWeight: 600 }}>
-                <Link href={`${locale}/products`} style={{ color: 'inherit' }}>
+                <Link href="products" style={{ color: 'inherit' }}>
                   {t('buttons')}
                 </Link>
               </Button>
@@ -226,7 +226,7 @@ const Services = ({ locale }: IRootParams) => {
                 variant="text"
                 endIcon={<ArrowForwardIosIcon />}
                 sx={{ color: '#D83F31', fontWeight: 600 }}>
-                <Link href={`${locale}/products`} style={{ color: 'inherit' }}>
+                <Link href="products" style={{ color: 'inherit' }}>
                   {t('buttons')}
                 </Link>
               </Button>

@@ -10,9 +10,12 @@ import MouseIcon from '@mui/icons-material/Mouse';
 import { useTranslations } from 'next-intl';
 import welcomeImage from '@/../public/images/home/fire-extinguisher.png';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import checkPathname from '@components/check-pathname';
 
 function HomeWelcome({ theme, locale }: IRootParams) {
   const t = useTranslations('Body.Home');
+  const pathname = usePathname();
 
   return (
     <Box sx={{ position: 'relative', overflow: 'hidden' }}>
@@ -204,7 +207,7 @@ function HomeWelcome({ theme, locale }: IRootParams) {
                   size="large"
                   sx={{ marginTop: 2, [theme.breakpoints.down('sm')]: { display: 'none' } }}
                   endIcon={<MouseIcon />}>
-                  <Link href={`${locale}/products`} style={{ color: 'inherit' }}>
+                  <Link href="products" style={{ color: 'inherit' }}>
                     {t('welcomeButton')}
                   </Link>
                 </Button>
