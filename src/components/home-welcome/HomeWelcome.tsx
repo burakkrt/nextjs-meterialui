@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { IRootParams } from './types';
 
 import Box from '@mui/material/Box';
@@ -12,10 +12,12 @@ import welcomeImage from '@/../public/images/home/fire-extinguisher.png';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import checkPathname from '@components/check-pathname';
+import Skeleton from '@mui/material/Skeleton';
 
 function HomeWelcome({ theme, locale }: IRootParams) {
   const t = useTranslations('Body.Home');
   const pathname = usePathname();
+  const [loadingHero1, setLoadingHero1] = useState(true);
 
   return (
     <Box sx={{ position: 'relative', overflow: 'hidden' }}>
@@ -158,27 +160,61 @@ function HomeWelcome({ theme, locale }: IRootParams) {
               },
             }}>
             <Grid item xs={12} sm={5}>
-              <Box
-                sx={{
-                  position: 'relative',
-                  width: '100%',
-                  height: '100%',
-                  minHeight: 300,
-                  opacity: '0.9',
-                  [theme.breakpoints.down('sm')]: {
-                    minHeight: 200,
-                  },
-                }}>
-                <Image
-                  src={welcomeImage}
-                  alt="Fire Extinguishers"
-                  fill
-                  priority
-                  placeholder="blur"
-                  sizes="100%"
-                  style={{ objectFit: 'contain' }}
-                />
-              </Box>
+              {loadingHero1 ? (
+                <Skeleton
+                  variant="rounded"
+                  animation="pulse"
+                  width={300}
+                  height={300}
+                  sx={{
+                    backgroundColor: 'rgba(0,0,0,0.2)',
+                    width: 300,
+                    height: 300,
+                  }}>
+                  <Box
+                    sx={{
+                      position: 'relative',
+                      width: '100%',
+                      height: '100%',
+                      minHeight: 300,
+                      opacity: '0.9',
+                      [theme.breakpoints.down('sm')]: {
+                        minHeight: 200,
+                      },
+                    }}>
+                    <Image
+                      src={welcomeImage}
+                      alt="Fire Extinguishers"
+                      fill
+                      onLoad={() => setLoadingHero1(false)}
+                      priority
+                      sizes="100%"
+                      style={{ objectFit: 'contain' }}
+                    />
+                  </Box>
+                </Skeleton>
+              ) : (
+                <Box
+                  sx={{
+                    position: 'relative',
+                    width: '100%',
+                    height: '100%',
+                    minHeight: 300,
+                    opacity: '0.9',
+                    [theme.breakpoints.down('sm')]: {
+                      minHeight: 200,
+                    },
+                  }}>
+                  <Image
+                    src={welcomeImage}
+                    alt="Fire Extinguishers"
+                    fill
+                    priority
+                    sizes="100%"
+                    style={{ objectFit: 'contain' }}
+                  />
+                </Box>
+              )}
             </Grid>
             <Grid item xs={12} sm={7}>
               <Box
