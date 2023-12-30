@@ -1,0 +1,19 @@
+
+
+#1 next configin içide aşağıdakilerin olduğundan emin ol
+
+ images: {
+    unoptimized: true,
+  },
+  output: 'export',
+  trailingSlash: true,
+
+
+#2 ilk yarn build ile deploy çıkart, out adında bir klasör çıkart
+
+#3 out un 'u aç ve "https://xn--gzeyyangin-9db.com" domain adresini global arat ve
+normal domain adresi ile değiştir.
+
+#4 tr klasöründeki index.html 'i kök dizine çıkart.
+
+#5 kök dizine çıkardığın index.html 'in içinde anasayfada bulunan linklerin başına /tr/ ekle.
